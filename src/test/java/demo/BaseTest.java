@@ -12,14 +12,15 @@ public abstract class BaseTest implements NavigationHelper, SQLHelper {
     static WebDriver driver;
 
     public static String url = "https://numero.visiquate.com";
-    private static String tenant = "";
-    private static String username = "";
-    private static String password = "";
+//    private static String tenant = ConfigDB.getTenant();
+//    private static String username = ConfigDB.getUserName();
+//    private static String password = ConfigDB.getTenantPassword();
 
-    public void initBrowser() {
+    public void initBrowser() throws IOException {
         if (driver == null) {
             driver = new FirefoxDriver();
-            login(url, tenant, username, password);
+            ConfigDB.getPropsFromFile();
+            login(url, ConfigDB.getTenant(), ConfigDB.getUserName(), ConfigDB.getTenantPassword());
 
         }
     }

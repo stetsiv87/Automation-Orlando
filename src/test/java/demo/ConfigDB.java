@@ -48,6 +48,18 @@ public class ConfigDB {
     public static String getDomain() {
         return props.getProperty("domain");
     }
+
+    public static String getTenant(){
+        return props.getProperty("tenant");
+    }
+
+    public static String getUserName () {
+        return props.getProperty("username");
+    }
+
+    public static String getTenantPassword(){
+        return props.getProperty("tenantpassword");
+    }
 }
 
 
