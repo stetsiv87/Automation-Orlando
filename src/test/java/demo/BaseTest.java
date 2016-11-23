@@ -25,11 +25,11 @@ public abstract class BaseTest implements NavigationHelper, SQLHelper {
         }
     }
 
-    @AfterClass
-    public static void afterClass() {
-        driver.quit();
-        //driver = null;
-    }
+//    @AfterClass
+//    public static void afterClass() {
+//        driver.quit();
+//        //driver = null;
+//    }
 
     public WebDriver getDriver() {
         return driver;
