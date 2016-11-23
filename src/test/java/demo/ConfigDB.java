@@ -10,7 +10,7 @@ import java.util.Properties;
 public class ConfigDB {
 
 
-    static String jhome = System.getProperty("user.home");
+    static String jhome = System.getProperty("Autoscript");
 
     public static String fullPath=jhome+ File.separator+"autoscript"+File.separator+"autoscript.properties";
 
