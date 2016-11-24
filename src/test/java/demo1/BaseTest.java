@@ -51,10 +51,6 @@ public  class BaseTest extends ZeroTest {
 
 
 
-
-
-
-
     @AfterClass
     public static void afterClass() {
         driver.quit();

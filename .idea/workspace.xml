@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba94091f-37d5-4d4b-bdb5-c21af805352c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/demo/OHHA_ChargesRolling25Test.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/demo/OHHA_openArAccountsTest.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/demo/BaseProjectTest.class" afterPath="$PROJECT_DIR$/target/test-classes/demo/BaseProjectTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/demo/BaseTest.class" afterPath="$PROJECT_DIR$/target/test-classes/demo/BaseTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/demo/BaseProjectTest.java" afterPath="$PROJECT_DIR$/src/test/java/demo/BaseProjectTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/demo/BaseTest.java" afterPath="$PROJECT_DIR$/src/test/java/demo/BaseTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/demo/OHHA_ChargesRolling25Test.java" afterPath="$PROJECT_DIR$/src/test/java/demo/OHHA_ChargesRolling25Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/demo/OHHA_openArAccountsTest.java" afterPath="$PROJECT_DIR$/src/test/java/demo/OHHA_openArAccountsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/demo/SQLHelper.java" afterPath="$PROJECT_DIR$/src/test/java/demo/SQLHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/demo/test.java" afterPath="$PROJECT_DIR$/src/test/java/demo/test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-demo.OHHA_ChargesRolling25Test.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-demo.OHHA_ChargesRolling25Test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-demo.OHHA_openArAccountsTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-demo.OHHA_openArAccountsTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/demo.OHHA_ChargesRolling25Test.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/demo.OHHA_ChargesRolling25Test.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/demo.OHHA_openArAccountsTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/demo.OHHA_openArAccountsTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/demo1/ZeroTest.java" afterPath="$PROJECT_DIR$/src/test/java/demo1/ZeroTest.java" />
     </list>
     <ignored path="FirstAutoScript.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,9 +43,12 @@
           <file leaf-file-name="ZeroTest.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/java/demo1/ZeroTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="323">
-                  <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-                  <folding />
+                <state relative-caret-position="459">
+                  <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+                  <folding>
+                    <element signature="method#getFiles#0;class#ZeroTest#0" expanded="false" />
+                    <element signature="method#getSteps#0;class#ZeroTest#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -151,8 +141,8 @@
           <file leaf-file-name="BaseTest.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/java/demo1/BaseTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="223">
-                  <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+                <state relative-caret-position="157">
+                  <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -292,8 +282,8 @@
         <option value="$PROJECT_DIR$/src/test/java/demo1/Test.java" />
         <option value="$PROJECT_DIR$/src/test/java/demo1/SQL.java" />
         <option value="$PROJECT_DIR$/src/test/java/demo1/ScriptsConfig.java" />
-        <option value="$PROJECT_DIR$/src/test/java/demo1/ZeroTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/demo1/BaseTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/demo1/ZeroTest.java" />
       </list>
     </option>
   </component>
@@ -1009,7 +999,7 @@
           <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="44" />
+      <option name="time" value="46" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1402,16 +1392,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/demo1/ZeroTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-          <folding />
+        <state relative-caret-position="459">
+          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+          <folding>
+            <element signature="method#getFiles#0;class#ZeroTest#0" expanded="false" />
+            <element signature="method#getSteps#0;class#ZeroTest#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/demo1/BaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+        <state relative-caret-position="157">
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
