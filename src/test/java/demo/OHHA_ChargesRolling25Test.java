@@ -1,6 +1,8 @@
 package demo;
 
-import demo.OHHAReportTest;import org.junit.Assert;
+import demo.OHHAReportTest;
+import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -8,6 +10,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
+import demo1.NavigationDriver;
 
 public class OHHA_ChargesRolling25Test extends OHHAReportTest {
     private static String query = "Select top 3  Aroutstanding  from nohbian_datamart_02.dbo.vatbsum";
@@ -33,9 +36,9 @@ public class OHHA_ChargesRolling25Test extends OHHAReportTest {
         System.out.println(totals);
     }
 
-//    @AfterClass
-//    public static void closeDriver(){
-//        afterClass();
-//    }
+    @AfterClass
+    public static void closeDriver(){
+        afterClass();
+    }
 
 }

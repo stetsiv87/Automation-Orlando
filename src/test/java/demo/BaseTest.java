@@ -1,6 +1,7 @@
 package demo;
 
 import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -9,7 +10,7 @@ import java.io.IOException;
 
 public abstract class BaseTest implements NavigationHelper, SQLHelper {
 
-    static WebDriver driver;
+     static WebDriver driver;
 
     public static String url = "https://numero.visiquate.com";
 //    private static String tenant = ConfigDB.getTenant();
@@ -25,11 +26,11 @@ public abstract class BaseTest implements NavigationHelper, SQLHelper {
         }
     }
 
-//    @AfterClass
-//    public static void afterClass() {
-//        driver.quit();
-//        //driver = null;
-//    }
+    @AfterClass
+    public static void afterClass() {
+        driver.quit();
+      //  driver = null;
+    }
 
     public WebDriver getDriver() {
         return driver;

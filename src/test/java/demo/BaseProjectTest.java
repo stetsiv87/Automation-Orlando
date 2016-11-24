@@ -15,6 +15,7 @@ public abstract class BaseProjectTest extends BaseTest {
 
     public void init() throws IOException {
         super.initBrowser();
+        selectedProject = null;
         if (!projectId.equals(selectedProject)) {
             openProject(projectId);
             selectedProject = projectId;

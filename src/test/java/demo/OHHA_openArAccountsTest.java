@@ -23,7 +23,7 @@ public class OHHA_openArAccountsTest extends OHHAReportTest {
 
     @Test
     public void testLoadReport() {
-        Assert.assertEquals("Open AR Accounts_Rpt. Numero", getDriver().getTitle());
+        Assert.assertEquals("wrong","Open AR Accounts_Rpt. Numero", getDriver().getTitle());
     }
 
     @Test
@@ -35,10 +35,10 @@ public class OHHA_openArAccountsTest extends OHHAReportTest {
         System.out.println(totals);
     }
 
-//    @AfterClass
-//    public static void closeDriver(){
-//        afterClass();
-//    }
+    @AfterClass
+    public static void closeDriver(){
+        afterClass();
+    }
 
 
 
