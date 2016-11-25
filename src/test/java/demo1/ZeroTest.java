@@ -1,25 +1,37 @@
 package demo1;
 
+import demo.*;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
 import java.io.IOException;
 
-/**
- * Created by Yuriy_Stetsiv on 11/24/2016.
- */
-public class ZeroTest extends NavigationDriver  {
+public class ZeroTest implements NavigationDriver  {
 
+    static WebDriver driver;
+    static ProjectConfig pc  = new ProjectConfig();
+    static ScriptsConfig sc = new ScriptsConfig();
 
-        static ProjectConfig pc  = new ProjectConfig();
-        static ScriptsConfig sc = new ScriptsConfig();
+    public static String url = "https://stg-login.visiquate.com/numero";
 
-    public static void getFiles (String fileScript, String fileProject, String folderProject) throws IOException {
-        sc.setTestScript(fileScript);
-        pc.setTestScript(fileProject);
-        pc.setFoldername(folderProject);
+    ZeroTest(String filename_script,String filename_config, String folderename_project) throws IOException {
+        sc.setTestScript(filename_script);
+        pc.setTestScript(filename_config);
+        pc.setFoldername(folderename_project);
         sc.getPropsFromFile();
         pc.getPropsFromFile();
     }
 
-    public static void getSteps () throws IOException {
+    public void initBrowser() throws IOException {
+        driver = new FirefoxDriver();
+        ConfigDB.getPropsFromFile();
+        login(url, ConfigDB.getTenant(), ConfigDB.getUserName(), ConfigDB.getTenantPassword());
+        SQL.getDatasource();
+    }
+
+
+
+    public  void getSteps () throws IOException {
         openProject(pc.getProjectName());
         buttonHandle();
         selectReportFolder(pc.getReportFolder());
@@ -27,15 +39,5 @@ public class ZeroTest extends NavigationDriver  {
         selectReportid(pc.getReport());
     }
 
-    public static  void OpenArTest() throws IOException {
-        String filename_script ="openAr.testquery";
-        String filename_project = "Open Ar Report.txt";
-        String foldername_project ="OHHA";
-        getFiles(filename_script,filename_project,foldername_project);
-        getSteps();
-
-      //  readValue(pc.getValue());
-
-    }
 
 }

@@ -13,9 +13,6 @@ public abstract class BaseTest implements NavigationHelper, SQLHelper {
      static WebDriver driver;
 
     public static String url = "https://numero.visiquate.com";
-//    private static String tenant = ConfigDB.getTenant();
-//    private static String username = ConfigDB.getUserName();
-//    private static String password = ConfigDB.getTenantPassword();
 
     public void initBrowser() throws IOException {
         if (driver == null) {

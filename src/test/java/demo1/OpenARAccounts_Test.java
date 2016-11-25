@@ -1,9 +1,7 @@
 package demo1;
 
 import demo.ConfigDB;
-import org.junit.AfterClass;
-import org.junit.Assert;
-import org.junit.BeforeClass;
+import org.junit.*;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -12,27 +10,23 @@ import java.io.IOException;
 import java.rmi.AccessException;
 import java.sql.SQLException;
 
+public  class OpenARAccounts_Test extends ZeroTest {
 
-public  class BaseTest extends ZeroTest {
+    static String filename_script ="openAr.testquery";
+    static String filename_project="Open Ar Report.txt";
+    static String foldername_project="OHHA";
 
-    static WebDriver driver;
-    public static String url = "https://stg-login.visiquate.com/numero";
-
-
-    @BeforeClass
-    public static void beforeClass() throws SQLException, IOException {
-        driver = new FirefoxDriver();
-        ConfigDB.getPropsFromFile();
-        login(url, ConfigDB.getTenant(), ConfigDB.getUserName(), ConfigDB.getTenantPassword());
-        SQL.getDatasource();
-        OpenArTest();
+    public OpenARAccounts_Test () throws IOException {
+        super(filename_script,filename_project,foldername_project);
+        super.initBrowser();
+        super.getSteps();
 
     }
 
     @Test
     public void testOpenAR_Report() throws SQLException, IOException {
         Assert.assertEquals("FAILED", pc.getTitle(), driver.getTitle());
-        }
+    }
 
     @Test
     public void testCheckTotals () throws IOException, SQLException {
@@ -41,15 +35,11 @@ public  class BaseTest extends ZeroTest {
 
         SQL.queryDB(sc.getTestQuery(), (rs, rowNumber) -> {
             a[0] = rs.getInt("counts");
-            });
+        });
 
         Assert.assertEquals("FAILED",a[0],Integer.parseInt(readValue(pc.getValue()).replace(",","")));
 
-        }
-//        System.out.println(a[0]);
-//        System.out.println(readValue(pc.getValue()).replace(",",""));
-
-
+    }
 
     @AfterClass
     public static void afterClass() {
