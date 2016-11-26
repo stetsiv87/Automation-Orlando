@@ -10,7 +10,7 @@ import java.util.Properties;
 public class ConfigDB {
 
 
-    static String jhome = System.getProperty("user.home");
+    static String jhome = System.getenv("Autoscript");
 
     public static String fullPath=jhome+ File.separator+"autoscript"+File.separator+"autoscript.properties";
 
@@ -47,6 +47,16 @@ public class ConfigDB {
 
     public static String getDomain() {
         return props.getProperty("domain");
+    }
+
+    public static String getTenant(){
+        return props.getProperty("tenant");
+    }
+    public static String getUserName () {
+        return props.getProperty("username");
+    }
+    public static String getTenantPassword(){
+        return props.getProperty("tenantpassword");
     }
 }
 

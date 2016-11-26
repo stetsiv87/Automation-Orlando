@@ -2,6 +2,8 @@ package demo;
 
 import org.junit.Before;
 
+import java.io.IOException;
+
 public abstract class BaseReportTest extends BaseProjectTest {
 
     private static String currentReport;
@@ -20,12 +22,12 @@ public abstract class BaseReportTest extends BaseProjectTest {
 
     @Before
     @Override
-    public void init() {
+    public void init() throws IOException {
         super.init();
         if (!reportId.equals(currentReport)) {
-            selectReportFolder(reportFolder);
-            selectDatasetid(datasetId);
-            selectReportid(reportId);
+         //   selectReportFolder(reportFolder);
+         //   selectDatasetid(datasetId);
+          //  selectReportid(reportId);
             currentReport = reportId;
         }
     }
