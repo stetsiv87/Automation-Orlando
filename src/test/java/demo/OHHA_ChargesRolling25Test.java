@@ -12,7 +12,7 @@ import java.util.Map;
 import static demo.Test_New.driver;
 
 public class OHHA_ChargesRolling25Test extends Test_New {
-    private static String query ="openAr.testquery";
+    private static String query ="script_ChargesRolling25Months.txt";
     private static String filename_project = "Charges Rolling 25 Months.txt";
     private static String foldername_project ="OHHA";
 
