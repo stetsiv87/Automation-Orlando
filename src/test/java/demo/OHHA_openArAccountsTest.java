@@ -54,7 +54,20 @@ public class OHHA_openArAccountsTest extends Test_New  {
         });
         System.out.println(a[0]);
         Assert.assertEquals("FAILED",a[0],Integer.parseInt(readValue(getValue()).replace(",","")));
+    }
 
+    @Test
+    public void testCheckTotals1 () throws IOException, SQLException {
+
+        final int[] a = new int[1];
+
+        System.out.println(readValue(getValue()));
+        System.out.println();
+        queryDB(getTestQuery(), (rs, rowNumber) -> {
+            a[0] = rs.getInt("counts");
+        });
+        System.out.println(a[0]);
+        Assert.assertEquals("FAILED", a[0], Integer.parseInt(readValue(getValue()).replace(",", "")));
     }
     @AfterClass
     public static void afterClass(){

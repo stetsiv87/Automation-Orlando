@@ -43,13 +43,14 @@ public class OHHA_ChargesRolling25Test extends Test_New {
 
         final double [] a = new double[1];
 
-        System.out.println(readValue(getValue()));
+        System.out.println(readValue((getValue().replace(",","")).replace("$","")));
+        System.out.println(getTestQuery());
 
         queryDB(getTestQuery(), (rs, rowNumber) -> {
-            a[0] = rs.getInt("counts");
+            a[0] = rs.getDouble("TotalCharges");
         });
         System.out.println(a[0]);
-        Assert.assertEquals("FAILED",a[0],Double.parseDouble(readValue(getValue()).replace(",","")));
+        Assert.assertEquals("FAILED",a[0], readValue((getValue().replace(",","")).replace("$","")));
     }
 
     @AfterClass
