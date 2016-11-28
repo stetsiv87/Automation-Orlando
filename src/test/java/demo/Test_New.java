@@ -28,10 +28,10 @@ public class Test_New extends NavigationHelper implements ProjectConfig,SQLHelpe
     public static String stFile;
     static int count =0;
 
-    public Test_New(String file_project_config, String projectFolder, String query) throws IOException {
+    public Test_New(String file_project_config, String projectFolder) throws IOException {
         this.file = file_project_config;
         ProjectConfig.getPropsFromFile(file_project_config,projectFolder);
-        ScriptsConfig.getPropsFromFile(query);
+       // ScriptsConfig.getPropsFromFile(query);
         System.out.println(getProjectName());
         if (!file.equals(stFile)){
             projectname= null;
@@ -71,7 +71,7 @@ public class Test_New extends NavigationHelper implements ProjectConfig,SQLHelpe
 
     }
 
-
+//
 //    public  <T extends Object> T chooseDataType(String type) throws IOException, SQLException {
 //
 //        String intDataType = "integer";
@@ -84,7 +84,7 @@ public class Test_New extends NavigationHelper implements ProjectConfig,SQLHelpe
 //            queryDB(getTestQuery(), (rs, rowNumber) -> {
 //                a[0] = BigDecimal.valueOf(Double.parseDouble(rs.getString(getDBColumnName())));
 //            });
-//           b=a[0];
+//
 //        }
 //
 //        if (type.equals(intDataType)) {
@@ -92,9 +92,9 @@ public class Test_New extends NavigationHelper implements ProjectConfig,SQLHelpe
 //            queryDB(getTestQuery(), (rs, rowNumber) -> {
 //                a[0] = rs.getInt(getDBColumnName());
 //            });
-//            b=a[0];
+//
 //        }
-//        return (T) b;
+//
 //    }
 
 

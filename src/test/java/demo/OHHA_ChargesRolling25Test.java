@@ -20,7 +20,7 @@ public class OHHA_ChargesRolling25Test extends Test_New {
 
 
     public OHHA_ChargesRolling25Test() throws IOException {
-        super(filename_project, foldername_project,query);
+        super(filename_project, foldername_project);
 
     }
 
@@ -45,10 +45,11 @@ public class OHHA_ChargesRolling25Test extends Test_New {
         double UIValue =  Double.parseDouble((readValue(getValue()).replace(",","")).replace("$",""));
         String intDataType ="integer";
         String bigDecimalDatatype = "double";
+      //  System.out.println(getTestQuery(query));
 
        if (getValueDataType().equals(bigDecimalDatatype)) {
            final BigDecimal[] a = new BigDecimal [1];
-           queryDB(getTestQuery(), (rs, rowNumber) -> {
+           queryDB(getTestQuery(query), (rs, rowNumber) -> {
                a[0] = BigDecimal.valueOf(Double.parseDouble(rs.getString(getDBColumnName())));
            });
            Assert.assertEquals("FAILED",a[0], BigDecimal.valueOf(UIValue));
@@ -56,7 +57,7 @@ public class OHHA_ChargesRolling25Test extends Test_New {
 
        if (getValueDataType().equals(intDataType)){
            final int[] a = new int[1];
-           queryDB(getTestQuery(), (rs, rowNumber) -> {
+           queryDB(getTestQuery(query), (rs, rowNumber) -> {
                a[0] = rs.getInt(getDBColumnName());
            });
            System.out.println(a[0]);
