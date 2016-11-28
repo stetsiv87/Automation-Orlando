@@ -5,6 +5,8 @@ import net.sourceforge.htmlunit.corejs.javascript.tools.shell.Global;
 import org.junit.*;
 
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
@@ -25,7 +27,6 @@ public class OHHA_ChargesRolling25Test extends Test_New {
     @BeforeClass
     public static void beforeClass () throws IOException {
         initBrowser();
-        System.out.println("ronnin initBrowser method..");
     }
 
     @Before
@@ -35,29 +36,30 @@ public class OHHA_ChargesRolling25Test extends Test_New {
 
     @Test
     public void testLoadReport() {
-        Assert.assertEquals("Open AR Accounts_Rpt. Numero", driver.getTitle());
+        Assert.assertEquals("Charges Rolling 25 Months_Rpt. Numero", driver.getTitle());
     }
 
     @Test
     public void testCheckTotals () throws IOException, SQLException {
 
-        final double [] a = new double[1];
+        final BigDecimal[] a = new BigDecimal [1];
 
-        System.out.println(readValue((getValue().replace(",","")).replace("$","")));
-        System.out.println(getTestQuery());
+        double UIValue =  Double.parseDouble((readValue(getValue()).replace(",","")).replace("$",""));
+
+
+
 
         queryDB(getTestQuery(), (rs, rowNumber) -> {
-            a[0] = rs.getDouble("TotalCharges");
+            a[0] = BigDecimal.valueOf(Double.parseDouble(rs.getString("TotalCharges")));
         });
         System.out.println(a[0]);
-        Assert.assertEquals("FAILED",a[0], readValue((getValue().replace(",","")).replace("$","")));
+
+        Assert.assertEquals("FAILED",a[0], BigDecimal.valueOf(UIValue));
     }
 
     @AfterClass
     public static void afterClass(){
         quit();
     }
-
-
 
 }

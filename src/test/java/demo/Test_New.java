@@ -22,6 +22,7 @@ public class Test_New extends NavigationHelper implements ProjectConfig,SQLHelpe
     static public String report;
     public static String file;
     public static String stFile;
+    static int count =0;
 
     public Test_New(String file_project_config, String projectFolder, String query) throws IOException {
         this.file = file_project_config;
