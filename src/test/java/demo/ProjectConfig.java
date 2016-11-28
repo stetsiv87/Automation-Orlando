@@ -47,4 +47,11 @@ public interface ProjectConfig {
         return props.getProperty("title_verification");
     }
 
+    default String getValueDataType() throws IOException {
+        return props.getProperty("metric_data_type");
+    }
+
+    default String getDBColumnName() throws IOException {
+        return props.getProperty("DB_column_name");
+    }
 }

@@ -35,26 +35,34 @@ public class OHHA_ChargesRolling25Test extends Test_New {
     }
 
     @Test
-    public void testLoadReport() {
-        Assert.assertEquals("Charges Rolling 25 Months_Rpt. Numero", driver.getTitle());
+    public void testLoadReport() throws IOException {
+        Assert.assertEquals(getTitle(), driver.getTitle());
     }
 
     @Test
     public void testCheckTotals () throws IOException, SQLException {
 
-        final BigDecimal[] a = new BigDecimal [1];
-
         double UIValue =  Double.parseDouble((readValue(getValue()).replace(",","")).replace("$",""));
+        String intDataType ="integer";
+        String bigDecimalDatatype = "double";
 
+       if (getValueDataType().equals(bigDecimalDatatype)) {
+           final BigDecimal[] a = new BigDecimal [1];
+           queryDB(getTestQuery(), (rs, rowNumber) -> {
+               a[0] = BigDecimal.valueOf(Double.parseDouble(rs.getString(getDBColumnName())));
+           });
+           Assert.assertEquals("FAILED",a[0], BigDecimal.valueOf(UIValue));
+       }
 
+       if (getValueDataType().equals(intDataType)){
+           final int[] a = new int[1];
+           queryDB(getTestQuery(), (rs, rowNumber) -> {
+               a[0] = rs.getInt(getDBColumnName());
+           });
+           System.out.println(a[0]);
+           Assert.assertEquals("FAILED", a[0], Integer.parseInt(readValue(getValue()).replace(",", "")));
+       }
 
-
-        queryDB(getTestQuery(), (rs, rowNumber) -> {
-            a[0] = BigDecimal.valueOf(Double.parseDouble(rs.getString("TotalCharges")));
-        });
-        System.out.println(a[0]);
-
-        Assert.assertEquals("FAILED",a[0], BigDecimal.valueOf(UIValue));
     }
 
     @AfterClass

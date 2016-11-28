@@ -40,6 +40,6 @@ public interface SQLHelper {
 
 
     interface RowHandler {
-        void handleRow(ResultSet rs, int rowNumber) throws SQLException;
+        void handleRow(ResultSet rs, int rowNumber) throws SQLException, IOException;
     }
 }

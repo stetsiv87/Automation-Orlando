@@ -7,6 +7,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
@@ -23,7 +24,6 @@ public class OHHA_openArAccountsTest extends Test_New  {
 
     public OHHA_openArAccountsTest() throws IOException {
         super(filename_project, foldername_project,query);
-        System.out.println("runnig constructor...");
     }
 
     @BeforeClass
@@ -38,37 +38,36 @@ public class OHHA_openArAccountsTest extends Test_New  {
     }
 
     @Test
-    public void testLoadReport() {
-        Assert.assertEquals("Open AR Accounts_Rpt. Numero", driver.getTitle());
+    public void testLoadReport() throws IOException {
+        Assert.assertEquals(getTitle(), driver.getTitle());
     }
 
     @Test
     public void testCheckTotals () throws IOException, SQLException {
 
-        final int[] a = new int[1];
+        double UIValue =  Double.parseDouble((readValue(getValue()).replace(",","")).replace("$",""));
 
-        System.out.println(readValue(getValue()));
-        System.out.println();
-        queryDB(getTestQuery(), (rs, rowNumber) -> {
-            a[0] = rs.getInt("counts");
-        });
-        System.out.println(a[0]);
-        Assert.assertEquals("FAILED",a[0],Integer.parseInt(readValue(getValue()).replace(",","")));
+        String intDataType ="integer";
+        String bigDecimalDatatype = "double";
+
+        if (getValueDataType().equals(bigDecimalDatatype)) {
+            final BigDecimal[] a = new BigDecimal [1];
+            queryDB(getTestQuery(), (rs, rowNumber) -> {
+                a[0] = BigDecimal.valueOf(Double.parseDouble(rs.getString(getDBColumnName())));
+            });
+            Assert.assertEquals("FAILED",a[0], BigDecimal.valueOf(UIValue));
+        }
+
+        if (getValueDataType().equals(intDataType)){
+            final int[] a = new int[1];
+            queryDB(getTestQuery(), (rs, rowNumber) -> {
+                a[0] = rs.getInt(getDBColumnName());
+            });
+            Assert.assertEquals("FAILED", a[0], Integer.parseInt(readValue(getValue()).replace(",", "")));
+        }
     }
 
-    @Test
-    public void testCheckTotals1 () throws IOException, SQLException {
 
-        final int[] a = new int[1];
-
-        System.out.println(readValue(getValue()));
-        System.out.println();
-        queryDB(getTestQuery(), (rs, rowNumber) -> {
-            a[0] = rs.getInt("counts");
-        });
-        System.out.println(a[0]);
-        Assert.assertEquals("FAILED", a[0], Integer.parseInt(readValue(getValue()).replace(",", "")));
-    }
     @AfterClass
     public static void afterClass(){
         quit();

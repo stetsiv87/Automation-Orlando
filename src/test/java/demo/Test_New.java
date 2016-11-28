@@ -1,10 +1,14 @@
 package demo;
 
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.sql.SQLException;
+import java.util.Objects;
 
 import static demo.ConfigDB.getTenant;
 import static demo.ConfigDB.getTenantPassword;
@@ -13,7 +17,7 @@ import static demo.ConfigDB.getUserName;
 /**
  * Created by Yuriy_Stetsiv on 11/26/2016.
  */
-public class Test_New extends NavigationHelper implements ProjectConfig,SQLHelper,ScriptsConfig {
+public class Test_New extends NavigationHelper implements ProjectConfig,SQLHelper,ScriptsConfig,DataTypeHandler {
 
     public static String url = "https://stg-login.visiquate.com/numero";
     static WebDriver driver;
@@ -66,6 +70,33 @@ public class Test_New extends NavigationHelper implements ProjectConfig,SQLHelpe
         }
 
     }
+
+
+//    public  <T extends Object> T chooseDataType(String type) throws IOException, SQLException {
+//
+//        String intDataType = "integer";
+//        String bigDecimalDatatype = "double";
+//
+//
+//
+//        if (type.equals(bigDecimalDatatype)) {
+//            final BigDecimal[] a = new BigDecimal[1];
+//            queryDB(getTestQuery(), (rs, rowNumber) -> {
+//                a[0] = BigDecimal.valueOf(Double.parseDouble(rs.getString(getDBColumnName())));
+//            });
+//           b=a[0];
+//        }
+//
+//        if (type.equals(intDataType)) {
+//            final int[] a = new int[1];
+//            queryDB(getTestQuery(), (rs, rowNumber) -> {
+//                a[0] = rs.getInt(getDBColumnName());
+//            });
+//            b=a[0];
+//        }
+//        return (T) b;
+//    }
+
 
     public static void quit() {
         driver.quit();
