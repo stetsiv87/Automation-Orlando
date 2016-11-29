@@ -71,31 +71,39 @@ public class Test_New extends NavigationHelper implements ProjectConfig,SQLHelpe
 
     }
 
-//
-//    public  <T extends Object> T chooseDataType(String type) throws IOException, SQLException {
-//
-//        String intDataType = "integer";
-//        String bigDecimalDatatype = "double";
-//
-//
-//
-//        if (type.equals(bigDecimalDatatype)) {
-//            final BigDecimal[] a = new BigDecimal[1];
-//            queryDB(getTestQuery(), (rs, rowNumber) -> {
-//                a[0] = BigDecimal.valueOf(Double.parseDouble(rs.getString(getDBColumnName())));
-//            });
-//
-//        }
-//
-//        if (type.equals(intDataType)) {
-//            final int[] a = new int[1];
-//            queryDB(getTestQuery(), (rs, rowNumber) -> {
-//                a[0] = rs.getInt(getDBColumnName());
-//            });
-//
-//        }
-//
-//    }
+    public String getDBvalue(String query) throws IOException, SQLException {
+        final String [] a = new String[1];
+        queryDB(getTestQuery(query), (rs, rowNumber) -> {
+            a[0] =rs.getString(getDBColumnName());
+        });
+        return a[0];
+    }
+
+    public String getUIValue (String value ){
+        String str = (readValue(value).replace(",","")).replace("$","");
+        return str;
+    }
+
+    public boolean CompareValues (String type, String db, String ui){
+        String intDataType ="integer";
+        String bigDecimalDatatype = "double";
+        Boolean val = false;
+
+        if (type.equals(intDataType)){
+            if(Integer.parseInt(db)==Integer.parseInt(ui)){
+                val = true;
+            }
+        }
+        if (type.equals(bigDecimalDatatype)){
+            BigDecimal a =BigDecimal.valueOf(Double.parseDouble(db));
+            BigDecimal b =BigDecimal.valueOf(Double.parseDouble(ui));
+            if (a.equals(b)){
+                val = true;
+            }
+        }
+
+        return val;
+    }
 
 
     public static void quit() {

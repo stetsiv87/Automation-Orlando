@@ -45,26 +45,9 @@ public class OHHA_openArAccountsTest extends Test_New  {
     @Test
     public void testCheckTotals () throws IOException, SQLException {
 
-        double UIValue =  Double.parseDouble((readValue(getValue()).replace(",","")).replace("$",""));
+        Assert.assertEquals("DB value: "+getDBvalue(query)+" does not match with UI value "+
+                getUIValue(getValue()), true,CompareValues(getValueDataType(),getDBvalue(query),getUIValue(getValue())));
 
-        String intDataType ="integer";
-        String bigDecimalDatatype = "double";
-
-        if (getValueDataType().equals(bigDecimalDatatype)) {
-            final BigDecimal[] a = new BigDecimal [1];
-            queryDB(getTestQuery(query), (rs, rowNumber) -> {
-                a[0] = BigDecimal.valueOf(Double.parseDouble(rs.getString(getDBColumnName())));
-            });
-            Assert.assertEquals("FAILED",a[0], BigDecimal.valueOf(UIValue));
-        }
-
-        if (getValueDataType().equals(intDataType)){
-            final int[] a = new int[1];
-            queryDB(getTestQuery(query), (rs, rowNumber) -> {
-                a[0] = rs.getInt(getDBColumnName());
-            });
-            Assert.assertEquals("FAILED", a[0], Integer.parseInt(readValue(getValue()).replace(",", "")));
-        }
     }
 
 
