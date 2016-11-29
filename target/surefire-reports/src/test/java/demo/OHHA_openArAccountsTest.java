@@ -1,32 +1,35 @@
 package demo;
 
-import demo.OHHAReportTest;
-import net.sourceforge.htmlunit.corejs.javascript.tools.shell.Global;
+import jdk.nashorn.internal.runtime.regexp.joni.Config;
+import org.junit.AfterClass;
 import org.junit.*;
+import org.junit.Assert;
+import org.junit.Test;
 
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
-import static demo.Test_New.driver;
+import static demo.ConfigDB.getTenantPassword;
 
-public class OHHA_ChargesRolling25Test extends Test_New {
-    private static String query ="script_ChargesRolling25Months.txt";
-    private static String filename_project = "Charges Rolling 25 Months.txt";
+public class OHHA_openArAccountsTest extends Test_New  {
+
+
+    private static String query ="openAr.testquery";
+    private static String filename_project = "Open Ar Report.txt";
     private static String foldername_project ="OHHA";
 
 
-    public OHHA_ChargesRolling25Test() throws IOException {
+    public OHHA_openArAccountsTest() throws IOException {
         super(filename_project, foldername_project);
-
     }
 
     @BeforeClass
     public static void beforeClass () throws IOException {
         initBrowser();
+
     }
 
     @Before
@@ -36,7 +39,7 @@ public class OHHA_ChargesRolling25Test extends Test_New {
 
     @Test
     public void testLoadReport() throws IOException {
-        Assert.assertEquals( driver.getTitle(),getTitle());
+        Assert.assertEquals(getTitle(), driver.getTitle());
     }
 
     @Test
@@ -52,5 +55,7 @@ public class OHHA_ChargesRolling25Test extends Test_New {
     public static void afterClass(){
         quit();
     }
+
+
 
 }
