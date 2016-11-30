@@ -18,7 +18,7 @@ public class OHHA_openArAccountsTest extends Test_New  {
 
 
     private static String query ="openAr.testquery";
-    private static String filename_project = "Open Ar Report.txt";
+    private static String filename_project = "Open Ar Report.sql";
     private static String foldername_project ="OHHA";
 
 
@@ -46,7 +46,7 @@ public class OHHA_openArAccountsTest extends Test_New  {
     public void testCheckTotals () throws IOException, SQLException {
 
         Assert.assertEquals("DB value: "+getDBvalue(query)+" does not match with UI value "+
-                getUIValue(getValue()), true,CompareValues(getValueDataType(),getDBvalue(query),getUIValue(getValue())));
+                getUIValue(getValue()), true,compareValues(getValueDataType(),getDBvalue(query),getUIValue(getValue())));
 
     }
 

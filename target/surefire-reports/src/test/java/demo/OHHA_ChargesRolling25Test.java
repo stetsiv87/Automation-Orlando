@@ -36,7 +36,7 @@ public class OHHA_ChargesRolling25Test extends Test_New {
 
     @Test
     public void testLoadReport() throws IOException {
-        Assert.assertEquals(getTitle(), driver.getTitle());
+        Assert.assertEquals( driver.getTitle(),getTitle());
     }
 
     @Test

@@ -84,25 +84,22 @@ public class Test_New extends NavigationHelper implements ProjectConfig,SQLHelpe
         return str;
     }
 
-    public boolean CompareValues (String type, String db, String ui){
+    public boolean compareValues (String type, String db, String ui){
         String intDataType ="integer";
         String bigDecimalDatatype = "double";
-        Boolean val = false;
+
 
         if (type.equals(intDataType)){
-            if(Integer.parseInt(db)==Integer.parseInt(ui)){
-                val = true;
-            }
+            return Integer.parseInt(db)==Integer.parseInt(ui);
+
         }
         if (type.equals(bigDecimalDatatype)){
             BigDecimal a =BigDecimal.valueOf(Double.parseDouble(db));
             BigDecimal b =BigDecimal.valueOf(Double.parseDouble(ui));
-            if (a.equals(b)){
-                val = true;
-            }
+           return a.equals(b);
         }
 
-        return val;
+        return false;
     }
 
 
