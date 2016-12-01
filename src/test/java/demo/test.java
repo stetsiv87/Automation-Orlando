@@ -2,6 +2,7 @@ package demo;
 
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -9,6 +10,8 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+
+import static demo.Test_New.driver;
 
 public class test {
     public static void main(String[] args) throws IOException {
@@ -29,24 +32,18 @@ public class test {
 //
 //        System.out.println(finals);
 
-       String path = "C:\\Users\\yuriy_stetsiv\\autoscript\\scripts\\script_ChargesRolling25Months.txt";
 
+            long start = System.currentTimeMillis();
+        System.out.println(start);
+            while (true) {
 
+                System.out.println(System.currentTimeMillis());
+                if (System.currentTimeMillis()-start>60000) {
+                    break;
+                }
 
-
-        try (BufferedReader br = new BufferedReader(new FileReader(path)))
-        {
-            String sCurrentLine;
-            while ((sCurrentLine = br.readLine()) != null) {
-                System.out.println(sCurrentLine);
             }
-
-        } catch (IOException e) {
-            e.printStackTrace();
         }
 
-
-
-
     }
-}
+

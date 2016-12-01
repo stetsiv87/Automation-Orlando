@@ -1,6 +1,7 @@
 package demo;
 
 import jdk.nashorn.internal.runtime.regexp.joni.Config;
+import org.apache.http.util.Asserts;
 import org.junit.AfterClass;
 import org.junit.*;
 import org.junit.Assert;
@@ -17,8 +18,8 @@ import static demo.ConfigDB.getTenantPassword;
 public class OHHA_openArAccountsTest extends Test_New  {
 
 
-    private static String query ="openAr.testquery";
-    private static String filename_project = "Open Ar Report.sql";
+    private static String query ="Open Ar Counts.sql";
+    private static String filename_project = "Open Ar Report.properties";
     private static String foldername_project ="OHHA";
 
 
@@ -29,7 +30,6 @@ public class OHHA_openArAccountsTest extends Test_New  {
     @BeforeClass
     public static void beforeClass () throws IOException {
         initBrowser();
-
     }
 
     @Before
@@ -39,7 +39,8 @@ public class OHHA_openArAccountsTest extends Test_New  {
 
     @Test
     public void testLoadReport() throws IOException {
-        Assert.assertEquals( driver.getTitle(),getTitle());
+       // Assert.assertEquals( driver.getTitle(),getTitle());
+        Assert.assertTrue(readElementName(getTitle()));
     }
 
     @Test
