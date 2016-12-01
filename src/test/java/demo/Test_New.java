@@ -19,7 +19,6 @@ import static demo.ConfigDB.getUserName;
  */
 public class Test_New extends NavigationHelper implements ProjectConfig,SQLHelper,ScriptsConfig,DataTypeHandler {
 
-    public static String url = "https://stg-login.visiquate.com/numero";
     static WebDriver driver;
     static public String projectname;
     static public String dataset;
@@ -31,8 +30,6 @@ public class Test_New extends NavigationHelper implements ProjectConfig,SQLHelpe
     public Test_New(String file_project_config, String projectFolder) throws IOException {
         this.file = file_project_config;
         ProjectConfig.getPropsFromFile(file_project_config,projectFolder);
-       // ScriptsConfig.getPropsFromFile(query);
-        System.out.println(getProjectName());
         if (!file.equals(stFile)){
             projectname= null;
             dataset=null;
@@ -45,7 +42,7 @@ public class Test_New extends NavigationHelper implements ProjectConfig,SQLHelpe
             driver = new FirefoxDriver();
             ConfigDB.getPropsFromFile();
             SQLHelper.getDatasource();
-            login(url, ConfigDB.getTenant(), ConfigDB.getUserName(), ConfigDB.getTenantPassword());
+            login(ConfigDB.getUrl(), ConfigDB.getTenant(), ConfigDB.getUserName(), ConfigDB.getTenantPassword());
         }
     }
 

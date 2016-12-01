@@ -2,9 +2,7 @@ package demo;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -63,27 +61,23 @@ public class NavigationHelper {
         driver.findElement(By.xpath("//td[(@oid =  '" + reportID + "'  )]/..")).click();
     }
 
-    public void handleprogressBar() {
+    public void handleprogressBar()  {
         while (true) {
             String progressBar = driver.findElement(By.className("mstrWaitBox")).getCssValue("visibility");
-            if (progressBar.equals("hidden"))
+            if (progressBar.equals("hidden")) {
                 break;
-        }
+            }
 
+        }
     }
 
     public String readValue(String element) {
-        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-        handleprogressBar();
         return  driver.findElement(By.xpath("//td[contains(@class, '" + element + "'  )]")).getText();
     }
 
-
-   
-
-
-//    openFolder()
-//    openReport()
-
-
+    public boolean readElementName(String element) {
+        driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+        //handleprogressBar();
+         return driver.findElement(By.xpath("//span[contains(@title, '" + element + "'  )]")).isDisplayed();
+    }
 }

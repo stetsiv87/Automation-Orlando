@@ -25,6 +25,10 @@ public class ConfigDB {
 
     }
 
+   public static String getUrl() throws IOException {
+        return props.getProperty("url");
+    }
+
     public static String getServerName() {
         return props.getProperty("serverName");
     }
