@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba94091f-37d5-4d4b-bdb5-c21af805352c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/demo/NavigationHelper.java" afterPath="$PROJECT_DIR$/src/test/java/demo/NavigationHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/demo/OHHA_ChargesRolling25Test.java" afterPath="$PROJECT_DIR$/src/test/java/demo/OHHA_ChargesRolling25Test.java" />
     </list>
     <ignored path="FirstAutoScript.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,8 +53,8 @@
           <file leaf-file-name="OHHA_ChargesRolling25Test.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/java/demo/OHHA_ChargesRolling25Test.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="442">
-                  <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+                <state relative-caret-position="255">
+                  <caret line="38" column="55" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
                   <folding />
                 </state>
               </provider>
@@ -160,8 +161,8 @@
           <file leaf-file-name="OHHA_openArAccountsTest.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/java/demo/OHHA_openArAccountsTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="274">
-                  <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+                <state relative-caret-position="308">
+                  <caret line="42" column="55" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="55" />
                   <folding>
                     <element signature="e#1485#1486#0" expanded="true" />
                     <element signature="e#1507#1508#0" expanded="true" />
@@ -240,9 +241,9 @@
         <option value="$PROJECT_DIR$/src/test/java/demo/ScriptsConfig.java" />
         <option value="$PROJECT_DIR$/src/test/java/demo/test.java" />
         <option value="$PROJECT_DIR$/src/test/java/demo/Test_New.java" />
-        <option value="$PROJECT_DIR$/src/test/java/demo/OHHA_ChargesRolling25Test.java" />
         <option value="$PROJECT_DIR$/src/test/java/demo/OHHA_openArAccountsTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/demo/NavigationHelper.java" />
+        <option value="$PROJECT_DIR$/src/test/java/demo/OHHA_ChargesRolling25Test.java" />
       </list>
     </option>
   </component>
@@ -789,8 +790,8 @@
     <history-entry file="OHHA_ChargesRolling25Test - 2016.12.01 at 13h 35m 44s.xml">
       <configuration name="OHHA_ChargesRolling25Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OHHA_openArAccountsTest_testLoadReport - 2016.12.01 at 12h 24m 53s.xml">
-      <configuration name="OHHA_openArAccountsTest.testLoadReport" configurationId="JUnit" />
+    <history-entry file="OHHA_ChargesRolling25Test_testLoadReport - 2016.12.01 at 13h 54m 36s.xml">
+      <configuration name="OHHA_ChargesRolling25Test.testLoadReport" configurationId="JUnit" />
     </history-entry>
     <history-entry file="OHHA_openArAccountsTest_testLoadReport - 2016.12.01 at 12h 26m 22s.xml">
       <configuration name="OHHA_openArAccountsTest.testLoadReport" configurationId="JUnit" />
@@ -815,7 +816,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="0" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1249,14 +1250,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/demo/OHHA_openArAccountsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/demo/NavigationHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
@@ -1269,10 +1262,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/demo/OHHA_openArAccountsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/demo/OHHA_ChargesRolling25Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+        <state relative-caret-position="255">
+          <caret line="38" column="55" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
           <folding />
         </state>
       </provider>
