@@ -72,23 +72,12 @@ public class NavigationHelper {
     }
 
     public String readValue(String element) {
-        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-        handleprogressBar();
         return  driver.findElement(By.xpath("//td[contains(@class, '" + element + "'  )]")).getText();
     }
 
     public boolean readElementName(String element) {
-        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-       // handleprogressBar();
+        driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+        //handleprogressBar();
          return driver.findElement(By.xpath("//span[contains(@title, '" + element + "'  )]")).isDisplayed();
     }
-
-
-   
-
-
-//    openFolder()
-//    openReport()
-
-
 }
