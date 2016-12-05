@@ -3,6 +3,7 @@ package demo;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -80,4 +81,28 @@ public class NavigationHelper {
         //handleprogressBar();
          return driver.findElement(By.xpath("//span[contains(@title, '" + element + "'  )]")).isDisplayed();
     }
+
+    public  void addAttribute (String attributeID) throws InterruptedException {
+        WebElement ele;
+        ele =  driver.findElement(By.xpath("//span[(@oid =  '" + attributeID + "'  )]"));
+        Actions action = new Actions(driver);
+        action.doubleClick(ele);
+        action.perform();
+    }
+
+
+    public void drillDown (String drillCell) {
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        handleprogressBar();
+        WebElement dynamicElement = (new WebDriverWait(driver, 10)
+                .until(ExpectedConditions.presenceOfElementLocated(By.linkText(drillCell))));
+        driver.findElement(By.linkText(drillCell)).click();
+    }
+
+    public boolean readElementName_detailed(String element) {
+        driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+        handleprogressBar();
+        return driver.findElement(By.xpath("//span[contains(@title, '" + element + "'  )]")).isDisplayed();
+    }
+
 }

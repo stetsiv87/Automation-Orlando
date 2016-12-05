@@ -54,4 +54,16 @@ public interface ProjectConfig {
     default String getDBColumnName() throws IOException {
         return props.getProperty("DB_column_name");
     }
+
+    default String getAttributeID() throws IOException {
+        return props.getProperty("Attribute_id");
+    }
+
+    default String getCellForDrill() throws IOException {
+        return props.getProperty("drill_cell");
+    }
+
+    default String getTitleDetailed() throws IOException {
+        return props.getProperty("title_verification_detailed");
+    }
 }
