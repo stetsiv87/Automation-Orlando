@@ -84,7 +84,7 @@ public class NavigationHelper {
 
     public  void addAttribute (String attributeID) throws InterruptedException {
         WebElement ele;
-        ele =  driver.findElement(By.xpath("//span[(@oid =  '" + attributeID + "'  )]"));
+        ele =  driver.findElement(By.xpath("//span[(@title =  '" + attributeID + "'  )]"));
         Actions action = new Actions(driver);
         action.doubleClick(ele);
         action.perform();
