@@ -77,7 +77,7 @@ public class Test_New extends NavigationHelper implements ProjectConfig,SQLHelpe
     }
 
     public String getUIValue (String value )  {
-        String str = (readValue(value).replace(",","")).replace("$","");
+        String str = (((readValue(value).replace(",","")).replace("$","")).replace("(","")).replace(")","");
         return str;
     }
 
