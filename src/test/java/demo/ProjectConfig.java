@@ -40,8 +40,9 @@ public interface ProjectConfig {
     }
 
     default String  getValue() throws IOException {
-        return props.getProperty("metric");
+        return props.getProperty("metric_location");
     }
+
 
     default String  getTitle() throws IOException {
         return props.getProperty("title_verification");
@@ -55,8 +56,12 @@ public interface ProjectConfig {
         return props.getProperty("DB_column_name");
     }
 
+    default String  getMetricTitle() throws IOException {
+        return props.getProperty("Adding_metric");
+    }
+
     default String getAttributeID() throws IOException {
-        return props.getProperty("Attribute_id");
+        return props.getProperty("Adding_attribute");
     }
 
     default String getCellForDrill() throws IOException {
