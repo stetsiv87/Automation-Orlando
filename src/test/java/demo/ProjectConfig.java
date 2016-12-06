@@ -61,7 +61,6 @@ public interface ProjectConfig {
     }
 
     default String getAttributeID() throws IOException {
-        return props.getProperty("Adding_attribute");
     }
 
     default String getCellForDrill() throws IOException {

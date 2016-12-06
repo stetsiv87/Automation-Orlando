@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="demo.OHHA_ChargesRolling25Test" time="61.52" errors="1" skipped="0">
+<testsuite tests="3" failures="0" name="demo.OHHA_ChargesRolling25Test" time="59.274" errors="1" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_101\jre\bin"/>
@@ -61,24 +61,24 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="demo.OHHA_ChargesRolling25Test" name="testLoadReport" time="17.655"/>
-  <testcase classname="demo.OHHA_ChargesRolling25Test" name="testCheckTotals" time="32.498">
+  <testcase classname="demo.OHHA_ChargesRolling25Test" name="testLoadReport" time="14.466"/>
+  <testcase classname="demo.OHHA_ChargesRolling25Test" name="testCheckTotals" time="32.405">
     <error message="Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td[contains(@class, &apos;null&apos;  )]&quot;}
-Command duration or timeout: 30.08 seconds
+Command duration or timeout: 30.05 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
 System info: host: &apos;EPUALVIW0515&apos;, ip: &apos;10.25.13.52&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_101&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=43.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 9f99838b-f033-4444-9e0e-2650d2ab1f8d
+Session ID: 1f711110-9fa9-45a2-9951-e6c357c4d40f
 *** Element info: {Using=xpath, value=//td[contains(@class, &apos;null&apos;  )]}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td[contains(@class, &apos;null&apos;  )]&quot;}
-Command duration or timeout: 30.08 seconds
+Command duration or timeout: 30.05 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
 System info: host: &apos;EPUALVIW0515&apos;, ip: &apos;10.25.13.52&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_101&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=43.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 9f99838b-f033-4444-9e0e-2650d2ab1f8d
+Session ID: 1f711110-9fa9-45a2-9951-e6c357c4d40f
 *** Element info: {Using=xpath, value=//td[contains(@class, &apos;null&apos;  )]}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -131,9 +131,9 @@ For documentation on this error, please visit: http://seleniumhq.org/exceptions/
 Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
 System info: host: &apos;EPUALVIW0515&apos;, ip: &apos;10.25.13.52&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_101&apos;
 Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/WINDOWS/TEMP/anonymous1917729042845870295webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
-	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/WINDOWS/TEMP/anonymous1917729042845870295webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/WINDOWS/TEMP/anonymous7486197047155798817webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/WINDOWS/TEMP/anonymous7486197047155798817webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
 </error>
   </testcase>
-  <testcase classname="demo.OHHA_ChargesRolling25Test" name="drillCheck" time="11.367"/>
+  <testcase classname="demo.OHHA_ChargesRolling25Test" name="drillCheck" time="12.403"/>
 </testsuite>
