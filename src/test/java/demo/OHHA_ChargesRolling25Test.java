@@ -47,6 +47,18 @@ public class OHHA_ChargesRolling25Test extends Test_New {
 
     }
 
+    @Test
+    public void drillCheck () throws IOException, InterruptedException {
+        addAttribute(getAttributeID());
+        drillDown(getCellForDrill());
+        String winHandleBefore = driver.getWindowHandle();
+        for(String winHandle : driver.getWindowHandles()){
+            driver.switchTo().window(winHandle);
+        }
+        Assert.assertTrue(readElementName_detailed(getTitleDetailed()));
+        driver.switchTo().window(winHandleBefore);
+    }
+
     @AfterClass
     public static void afterClass(){
         quit();
