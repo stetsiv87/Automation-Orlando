@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static demo.Test_New.driver;
-
+@Ignore
 public class OHHA_ChargesRolling25Test extends Test_New {
     private static String query ="Charges Rolling 25 Months.sql";
     private static String filename_project = "Charges Rolling 25 Months.properties";
