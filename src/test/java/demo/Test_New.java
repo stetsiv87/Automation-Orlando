@@ -41,7 +41,7 @@ public class Test_New extends NavigationHelper implements ProjectConfig,SQLHelpe
         if (driver==null) {
             driver = new FirefoxDriver();
             ConfigDB.getPropsFromFile();
-            SQLHelper.getDatasource();
+         //   SQLHelper.getDatasource();
             login(ConfigDB.getUrl(), ConfigDB.getTenant(), ConfigDB.getUserName(), ConfigDB.getTenantPassword());
         }
     }

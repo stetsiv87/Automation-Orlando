@@ -75,7 +75,7 @@ public class NavigationHelper {
         return  driver.findElement(By.xpath("//td[contains(@class, '" + element + "'  )]")).getText();
     }
 
-    public boolean readElementName(String element) {
+    public Boolean readElementName(String element) {
         driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
         //handleprogressBar();
          return driver.findElement(By.xpath("//span[contains(@title, '" + element + "'  )]")).isDisplayed();

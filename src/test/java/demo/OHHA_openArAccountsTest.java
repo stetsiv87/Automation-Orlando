@@ -39,10 +39,12 @@ public class OHHA_openArAccountsTest extends Test_New  {
 
     @Test
     public void testLoadReport() throws IOException {
-       // Assert.assertEquals( driver.getTitle(),getTitle());
-        Assert.assertTrue(readElementName(getTitle()));
+       String [] tokens =getTitle().split(",");
+        for (int i = 0; i <tokens.length ; i++) {
+                Assert.assertTrue(readElementName(tokens[i]));
+        }
     }
-
+    @Ignore
     @Test
     public void testCheckTotals () throws IOException, SQLException {
 

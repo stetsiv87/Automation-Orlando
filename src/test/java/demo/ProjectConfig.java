@@ -8,10 +8,7 @@ import java.util.Properties;
 
 public interface ProjectConfig {
 
-
     Properties props = new Properties();
-
-
 
     static void getPropsFromFile(String filename, String foldername) throws IOException {
         String jhome = System.getenv("Autoscript");

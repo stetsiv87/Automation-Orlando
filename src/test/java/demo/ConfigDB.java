@@ -12,7 +12,7 @@ public class ConfigDB {
 
     static String jhome = System.getenv("Autoscript");
 
-    public static String fullPath=jhome+ File.separator+"autoscript"+File.separator+"autoscript.properties";
+    public static String fullPath=jhome + File.separator+"autoscript" +File.separator+"autoscript.properties";
 
     private static Properties props = new Properties();
 
