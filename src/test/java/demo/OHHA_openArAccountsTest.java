@@ -1,19 +1,13 @@
 package demo;
 
-import jdk.nashorn.internal.runtime.regexp.joni.Config;
-import org.apache.http.util.Asserts;
+
 import org.junit.AfterClass;
 import org.junit.*;
 import org.junit.Assert;
 import org.junit.Test;
-
 import java.io.IOException;
-import java.math.BigDecimal;
 import java.sql.SQLException;
-import java.util.HashMap;
-import java.util.Map;
 
-import static demo.ConfigDB.getTenantPassword;
 
 public class OHHA_openArAccountsTest extends Test_New  {
 
@@ -24,7 +18,7 @@ public class OHHA_openArAccountsTest extends Test_New  {
 
 
     public OHHA_openArAccountsTest() throws IOException {
-        super(filename_project, foldername_project);
+        super(filename_project, foldername_project, query);
     }
 
     @BeforeClass
@@ -39,31 +33,18 @@ public class OHHA_openArAccountsTest extends Test_New  {
 
     @Test
     public void testLoadReport() throws IOException {
-       // Assert.assertEquals( driver.getTitle(),getTitle());
-        Assert.assertTrue(readElementName(getTitle()));
+        checkElementsPresence();
     }
 
     @Test
     public void testCheckTotals () throws IOException, SQLException {
-
-        Assert.assertEquals("DB value: "+getDBvalue(query)+" does not match with UI value "+
-                getUIValue(getValue()), true,compareValues(getValueDataType(),getDBvalue(query),getUIValue(getValue())));
-
+        checkUIDB();
     }
-
 
     @Test
     public void drillCheck () throws IOException, InterruptedException {
-        addAttribute(getAttributeID());
-        drillDown(getCellForDrill());
-        String winHandleBefore = driver.getWindowHandle();
-        for(String winHandle : driver.getWindowHandles()){
-            driver.switchTo().window(winHandle);
-        }
-        Assert.assertTrue(readElementName_detailed(getTitleDetailed()));
-        driver.switchTo().window(winHandleBefore);
+        checkDrills();
     }
-
 
     @AfterClass
     public static void afterClass(){

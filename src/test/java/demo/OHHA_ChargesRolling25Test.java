@@ -20,7 +20,7 @@ public class OHHA_ChargesRolling25Test extends Test_New {
 
 
     public OHHA_ChargesRolling25Test() throws IOException {
-        super(filename_project, foldername_project);
+        super(filename_project, foldername_project, query);
 
     }
 

@@ -25,10 +25,12 @@ public class Test_New extends NavigationHelper implements ProjectConfig,SQLHelpe
     static public String report;
     public static String file;
     public static String stFile;
-    static int count =0;
+    public static String query;
 
-    public Test_New(String file_project_config, String projectFolder) throws IOException {
+
+    public Test_New(String file_project_config, String projectFolder, String query) throws IOException {
         this.file = file_project_config;
+        this.query = query;
         ProjectConfig.getPropsFromFile(file_project_config,projectFolder);
         if (!file.equals(stFile)){
             projectname= null;
@@ -45,7 +47,6 @@ public class Test_New extends NavigationHelper implements ProjectConfig,SQLHelpe
             login(ConfigDB.getUrl(), ConfigDB.getTenant(), ConfigDB.getUserName(), ConfigDB.getTenantPassword());
         }
     }
-
 
     public void steps() throws IOException {
         stFile =file;
@@ -97,6 +98,33 @@ public class Test_New extends NavigationHelper implements ProjectConfig,SQLHelpe
         }
 
         return false;
+    }
+
+    public void checkElementsPresence() throws IOException {
+        String [] tokens = getTitle().split(",");
+        for (int i = 0; i <tokens.length ; i++) {
+            Assert.assertTrue(readElementName(tokens[i]));
+        }
+    }
+
+    public void checkUIDB () throws IOException, SQLException {
+        Assert.assertEquals("DB value: "+getDBvalue(query)+" does not match with UI value "+
+                getUIValue(getValue()), true,compareValues(getValueDataType(),getDBvalue(query),getUIValue(getValue())));
+
+    }
+
+    public void checkDrills () throws IOException, InterruptedException {
+        addAttribute(getAttributeID());
+        drillDown(getCellForDrill());
+        String winHandleBefore = driver.getWindowHandle();
+        for(String winHandle : driver.getWindowHandles()){
+            driver.switchTo().window(winHandle);
+        }
+        String [] tokens = getTitleDetailed().split(",");
+        for (int i = 0; i <tokens.length ; i++) {
+            Assert.assertTrue(readElementName_detailed(tokens[1]));
+        }
+        driver.switchTo().window(winHandleBefore);
     }
 
 
