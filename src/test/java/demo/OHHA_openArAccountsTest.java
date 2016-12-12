@@ -39,10 +39,7 @@ public class OHHA_openArAccountsTest extends Test_New  {
 
     @Test
     public void testLoadReport() throws IOException {
-       String [] tokens =getTitle().split(",");
-        for (int i = 0; i <tokens.length ; i++) {
-                Assert.assertTrue(readElementName(tokens[i]));
-        }
+        checkElementPresence();
     }
     @Ignore
     @Test

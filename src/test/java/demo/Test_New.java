@@ -100,6 +100,14 @@ public class Test_New extends NavigationHelper implements ProjectConfig,SQLHelpe
     }
 
 
+    public void checkElementPresence() throws IOException {
+        String [] tokens =getTitle().split(",");
+        for (int i = 0; i <tokens.length ; i++) {
+            Assert.assertTrue(readElementName(tokens[i]));
+        }
+    }
+
+
     public static void quit() {
         driver.quit();
         driver = null;
