@@ -100,7 +100,7 @@ public class Test_New extends NavigationHelper implements ProjectConfig,SQLHelpe
         return false;
     }
 
-    public void checkElementsPresence() throws IOException {
+    public void checkElementsPresenceSummary() throws IOException {
         String [] tokens = getTitle().split(",");
         for (int i = 0; i <tokens.length ; i++) {
             Assert.assertTrue(readElementName(tokens[i]));
@@ -113,7 +113,7 @@ public class Test_New extends NavigationHelper implements ProjectConfig,SQLHelpe
 
     }
 
-    public void checkDrills () throws IOException, InterruptedException {
+    public void checkElementsPresenceDetailed() throws IOException, InterruptedException {
         addAttribute(getAttributeID());
         drillDown(getCellForDrill());
         String winHandleBefore = driver.getWindowHandle();

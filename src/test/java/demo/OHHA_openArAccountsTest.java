@@ -1,16 +1,11 @@
 package demo;
 
-
-import org.junit.AfterClass;
 import org.junit.*;
-import org.junit.Assert;
-import org.junit.Test;
 import java.io.IOException;
 import java.sql.SQLException;
 
 
 public class OHHA_openArAccountsTest extends Test_New  {
-
 
     private static String query ="Open Ar Counts.sql";
     private static String filename_project = "Open Ar Report.properties";
@@ -33,7 +28,7 @@ public class OHHA_openArAccountsTest extends Test_New  {
 
     @Test
     public void testLoadReport() throws IOException {
-        checkElementsPresence();
+        checkElementsPresenceSummary();
     }
 
     @Test
@@ -42,15 +37,12 @@ public class OHHA_openArAccountsTest extends Test_New  {
     }
 
     @Test
-    public void drillCheck () throws IOException, InterruptedException {
-        checkDrills();
+    public void testDrills () throws IOException, InterruptedException {
+        checkElementsPresenceDetailed();
     }
 
     @AfterClass
     public static void afterClass(){
         quit();
     }
-
-
-
 }
