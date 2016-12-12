@@ -1,6 +1,5 @@
-package demo;
+package Orlando;
 
-import org.junit.AfterClass;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -8,16 +7,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.sql.SQLException;
-import java.util.Objects;
-
-import static demo.ConfigDB.getTenant;
-import static demo.ConfigDB.getTenantPassword;
-import static demo.ConfigDB.getUserName;
 
 /**
  * Created by Yuriy_Stetsiv on 11/26/2016.
  */
-public class Test_New extends NavigationHelper implements ProjectConfig,SQLHelper,ScriptsConfig,DataTypeHandler {
+public class BaseTest extends NavigationHelper implements ProjectConfig,SQLHelper,ScriptsConfig {
 
     static WebDriver driver;
     static public String projectname;
@@ -28,7 +22,7 @@ public class Test_New extends NavigationHelper implements ProjectConfig,SQLHelpe
     public static String query;
 
 
-    public Test_New(String file_project_config, String projectFolder, String query) throws IOException {
+    public BaseTest(String file_project_config, String projectFolder, String query) throws IOException {
         this.file = file_project_config;
         this.query = query;
         ProjectConfig.getPropsFromFile(file_project_config,projectFolder);
@@ -94,7 +88,9 @@ public class Test_New extends NavigationHelper implements ProjectConfig,SQLHelpe
         if (type.equals(bigDecimalDatatype)){
             BigDecimal a =BigDecimal.valueOf(Double.parseDouble(db));
             BigDecimal b =BigDecimal.valueOf(Double.parseDouble(ui));
+            System.out.println(a+ " " + b);
            return a.equals(b);
+
         }
 
         return false;

@@ -1,4 +1,4 @@
-package demo;
+package Orlando;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
-import static demo.Test_New.driver;
+import static Orlando.BaseTest.driver;
 
 
 public class NavigationHelper {

@@ -1,19 +1,21 @@
-package demo;
+package Orlando.OHHA;
 
+import Orlando.BaseTest;
 import org.junit.*;
 import java.io.IOException;
 import java.sql.SQLException;
 
 
-public class OHHA_openArAccountsTest extends Test_New  {
+public class OHHA_ChargesRolling25BaseTest extends BaseTest {
 
-    private static String query ="Open Ar Counts.sql";
-    private static String filename_project = "Open Ar Report.properties";
+    private static String query ="Charges Rolling 25 Months.sql";
+    private static String filename_project = "Charges Rolling 25 Months.properties";
     private static String foldername_project ="OHHA";
 
 
-    public OHHA_openArAccountsTest() throws IOException {
+    public OHHA_ChargesRolling25BaseTest() throws IOException {
         super(filename_project, foldername_project, query);
+
     }
 
     @BeforeClass

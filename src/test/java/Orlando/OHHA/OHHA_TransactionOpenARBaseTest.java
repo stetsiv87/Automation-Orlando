@@ -1,18 +1,18 @@
-package demo;
+package Orlando.OHHA;
 
+import Orlando.BaseTest;
 import org.junit.*;
 import java.io.IOException;
 import java.sql.SQLException;
 
+public class OHHA_TransactionOpenARBaseTest extends BaseTest {
 
-public class OHHA_ChargesRolling25Test extends Test_New {
-
-    private static String query ="Charges Rolling 25 Months.sql";
-    private static String filename_project = "Charges Rolling 25 Months.properties";
+    private static String query ="TransactionOpenAR.sql";
+    private static String filename_project = "Transaction Open AR.properties";
     private static String foldername_project ="OHHA";
 
 
-    public OHHA_ChargesRolling25Test() throws IOException {
+    public OHHA_TransactionOpenARBaseTest() throws IOException {
         super(filename_project, foldername_project, query);
 
     }
@@ -25,7 +25,8 @@ public class OHHA_ChargesRolling25Test extends Test_New {
     @Before
     public void before() throws IOException {
         steps();
-    }
+
+}
 
     @Test
     public void testLoadReport() throws IOException {
@@ -33,7 +34,8 @@ public class OHHA_ChargesRolling25Test extends Test_New {
     }
 
     @Test
-    public void testCheckTotals () throws IOException, SQLException {
+    public void testCheckTotals () throws IOException, SQLException, InterruptedException {
+        addAttribute(getMetricTitle());
         checkUIDB();
     }
 
@@ -47,3 +49,5 @@ public class OHHA_ChargesRolling25Test extends Test_New {
         quit();
     }
 }
+
+
