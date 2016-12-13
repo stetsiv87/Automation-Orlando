@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: Orlando.OHHA.OHHA_ChargesRolling25BaseTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 45.785 sec
