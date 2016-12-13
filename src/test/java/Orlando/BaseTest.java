@@ -77,15 +77,15 @@ public class BaseTest extends NavigationHelper implements ProjectConfig,SQLHelpe
     }
 
     public boolean compareValues (String type, String db, String ui){
-        String intDataType ="integer";
-        String bigDecimalDatatype = "double";
+        final String INTEGER_DATATYPE ="integer";
+        final String DOUBLE_DATATYPE = "double";
 
 
-        if (type.equals(intDataType)){
+        if (type.equals(INTEGER_DATATYPE)){
             return Integer.parseInt(db)==Integer.parseInt(ui);
 
         }
-        if (type.equals(bigDecimalDatatype)){
+        if (type.equals(DOUBLE_DATATYPE)){
             BigDecimal a =BigDecimal.valueOf(Double.parseDouble(db));
             BigDecimal b =BigDecimal.valueOf(Double.parseDouble(ui));
             System.out.println(a+ " " + b);

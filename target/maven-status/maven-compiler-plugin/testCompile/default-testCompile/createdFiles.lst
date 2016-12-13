@@ -1,3 +1,4 @@
+Orlando\OHHA\OHHA_SelfPayBaseTest.class
 Orlando\SQLHelper$RowHandler.class
 Orlando\OHHA\OHHA_TransactionOpenARBaseTest.class
 Orlando\ProjectConfig.class
@@ -7,4 +8,5 @@ Orlando\ConfigDB.class
 Orlando\NavigationHelper.class
 Orlando\OHHA\OHHA_openArAccountsBaseTest.class
 Orlando\ScriptsConfig.class
+Orlando\OHHA\OHHA_HoldsBaseTest.class
 Orlando\OHHA\OHHA_ChargesRolling25BaseTest.class
