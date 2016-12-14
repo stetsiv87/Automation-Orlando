@@ -96,12 +96,16 @@ public class NavigationHelper {
         handleprogressBar();
         WebElement dynamicElement = (new WebDriverWait(driver, 10)
                 .until(ExpectedConditions.presenceOfElementLocated(By.linkText(drillCell))));
+
         driver.findElement(By.linkText(drillCell)).click();
     }
+
 
     public boolean readElementName_detailed(String element) {
         driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
         handleprogressBar();
+        WebElement dynamicElement = (new WebDriverWait(driver, 10)
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[contains(@title, '" + element + "'  )]"))));
         return driver.findElement(By.xpath("//span[contains(@title, '" + element + "'  )]")).isDisplayed();
     }
 

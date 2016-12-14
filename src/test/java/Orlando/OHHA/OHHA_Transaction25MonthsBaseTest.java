@@ -1,20 +1,25 @@
 package Orlando.OHHA;
 
 import Orlando.BaseTest;
-import org.apache.commons.logging.Log;
-import org.junit.*;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
 import java.io.IOException;
 import java.sql.SQLException;
 
+/**
+ * Created by Yuriy_Stetsiv on 12/14/2016.
+ */
+public class OHHA_Transaction25MonthsBaseTest extends BaseTest {
 
-public class OHHA_openArAccountsBaseTest extends BaseTest {
-
-    private static String query ="Open Ar Counts.sql";
-    private static String filename_project = "Open Ar Report.properties";
+    private static String query ="Transaction 25 Months.sql";
+    private static String filename_project = "Transaction 25 Months.properties";
     private static String foldername_project ="OHHA";
 
 
-    public OHHA_openArAccountsBaseTest() throws IOException {
+    public OHHA_Transaction25MonthsBaseTest() throws IOException {
         super(filename_project, foldername_project, query);
     }
 
@@ -24,8 +29,9 @@ public class OHHA_openArAccountsBaseTest extends BaseTest {
     }
 
     @Before
-    public void before() throws IOException, InterruptedException {
+    public void before() throws IOException {
         steps();
+
     }
 
     @Test
@@ -34,7 +40,8 @@ public class OHHA_openArAccountsBaseTest extends BaseTest {
     }
 
     @Test
-    public void testCheckTotals () throws IOException, SQLException {
+    public void testCheckTotals () throws IOException, SQLException, InterruptedException {
+        addAttribute(getMetricTitle());
         checkUIDB();
     }
 
@@ -43,9 +50,9 @@ public class OHHA_openArAccountsBaseTest extends BaseTest {
         checkElementsPresenceDetailed();
     }
 
-
     @AfterClass
     public static void afterClass(){
         quit();
     }
+
 }

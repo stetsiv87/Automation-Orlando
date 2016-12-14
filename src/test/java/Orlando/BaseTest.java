@@ -42,7 +42,7 @@ public class BaseTest extends NavigationHelper implements ProjectConfig,SQLHelpe
         }
     }
 
-    public void steps() throws IOException {
+    public  void steps() throws IOException {
         stFile =file;
         if (!getProjectName().equals(projectname)){
             openProject(getProjectName());
@@ -110,6 +110,7 @@ public class BaseTest extends NavigationHelper implements ProjectConfig,SQLHelpe
     }
 
     public void checkElementsPresenceDetailed() throws IOException, InterruptedException {
+        System.out.println("checkElementsPresenceDetailed () method is running...");
         addAttribute(getAttributeID());
         drillDown(getCellForDrill());
         String winHandleBefore = driver.getWindowHandle();
