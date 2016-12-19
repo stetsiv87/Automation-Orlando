@@ -2,17 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba94091f-37d5-4d4b-bdb5-c21af805352c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/Orlando.OHHA.OHHA_ChargesRolling25BaseTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/Orlando.OHHA.OHHA_HoldsBaseTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Orlando.OHHA.OHHA_ChargesRolling25BaseTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Orlando.OHHA.OHHA_HoldsBaseTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire/surefire3443102029616027489tmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire/surefire4479654108131796469tmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire/surefire4893105281345721270tmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire/surefirebooter2846173266306219685.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire/surefirebooter4980397926758792080.jar" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Orlando/BaseTest.class" afterPath="$PROJECT_DIR$/target/test-classes/Orlando/BaseTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Orlando/NavigationHelper.class" afterPath="$PROJECT_DIR$/target/test-classes/Orlando/NavigationHelper.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Orlando/OHHA/OHHA_openArAccountsBaseTest.class" afterPath="$PROJECT_DIR$/target/test-classes/Orlando/OHHA/OHHA_openArAccountsBaseTest.class" />
@@ -107,13 +96,9 @@
       <file leaf-file-name="OHHA_ChargesRolling25BaseTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Orlando/OHHA/OHHA_ChargesRolling25BaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="204">
               <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="18" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1119#1120#0" expanded="true" />
-                <element signature="e#1141#1142#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -121,9 +106,10 @@
       <file leaf-file-name="OHHA_SelfPayBaseTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Orlando/OHHA/OHHA_SelfPayBaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
+            <state relative-caret-position="799">
               <caret line="56" column="0" selection-start-line="16" selection-start-column="4" selection-end-line="56" selection-end-column="0" />
               <folding>
+                <element signature="imports" expanded="false" />
                 <element signature="e#1266#1267#0" expanded="false" />
                 <element signature="e#1288#1289#0" expanded="false" />
               </folding>
@@ -134,10 +120,11 @@
       <file leaf-file-name="OHHA_HoldsBaseTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Orlando/OHHA/OHHA_HoldsBaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
+            <state relative-caret-position="272">
               <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1257#1258#0" expanded="false" />
+                <element signature="e#1279#1280#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -146,19 +133,46 @@
       <file leaf-file-name="BaseTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Orlando/BaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="113" column="39" selection-start-line="113" selection-start-column="39" selection-end-line="113" selection-end-column="39" />
+            <state relative-caret-position="1714">
+              <caret line="143" column="9" selection-start-line="143" selection-start-column="9" selection-end-line="143" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SQLHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Orlando/SQLHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NavigationHelper.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="NavigationHelper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/Orlando/NavigationHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="473">
+              <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+              <folding>
+                <element signature="method#login#0;class#NavigationHelper#0" expanded="false" />
+                <element signature="method#openProject#0;class#NavigationHelper#0" expanded="false" />
+                <element signature="method#buttonHandle#0;class#NavigationHelper#0" expanded="false" />
+                <element signature="method#selectReportFolder#0;class#NavigationHelper#0" expanded="false" />
+                <element signature="method#selectDatasetid#0;class#NavigationHelper#0" expanded="false" />
+                <element signature="method#selectReportid#0;class#NavigationHelper#0" expanded="false" />
+                <element signature="method#handleprogressBar#0;class#NavigationHelper#0" expanded="false" />
+                <element signature="method#readValue#0;class#NavigationHelper#0" expanded="false" />
+                <element signature="method#readElementName#0;class#NavigationHelper#0" expanded="false" />
+                <element signature="method#addAttribute#0;class#NavigationHelper#0" expanded="false" />
+                <element signature="method#drillDown#0;class#NavigationHelper#0" expanded="false" />
+                <element signature="method#readElementName_detailed#0;class#NavigationHelper#0" expanded="false" />
+                <element signature="method#getValueFromSummaryBeforeDrill#0;class#NavigationHelper#0" expanded="false" />
+                <element signature="method#getIntegerValueFromDetail#0;class#NavigationHelper#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -166,21 +180,20 @@
       <file leaf-file-name="OHHA_openArAccountsBaseTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Orlando/OHHA/OHHA_openArAccountsBaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state relative-caret-position="677">
+              <caret line="55" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding>
-                <element signature="e#1154#1155#0" expanded="true" />
-                <element signature="e#1176#1177#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OHHA_Transaction25MonthsBaseTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OHHA_Transaction25MonthsBaseTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Orlando/OHHA/OHHA_Transaction25MonthsBaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+            <state relative-caret-position="314">
+              <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -191,9 +204,13 @@
       <file leaf-file-name="OHHA_TransactionOpenARBaseTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Orlando/OHHA/OHHA_TransactionOpenARBaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
+            <state relative-caret-position="748">
               <caret line="49" column="5" selection-start-line="9" selection-start-column="3" selection-end-line="49" selection-end-column="5" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#1165#1166#0" expanded="false" />
+                <element signature="e#1187#1188#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -271,9 +288,9 @@
         <option value="$PROJECT_DIR$/src/test/java/Orlando/OHHA/OHHA_HoldsBaseTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/Orlando/OHHA/Test.java" />
         <option value="$PROJECT_DIR$/src/test/java/Orlando/OHHA/Test12.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Orlando/BaseTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Orlando/OHHA/OHHA_openArAccountsBaseTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/Orlando/OHHA/OHHA_Transaction25MonthsBaseTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Orlando/OHHA/OHHA_openArAccountsBaseTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Orlando/BaseTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/Orlando/NavigationHelper.java" />
       </list>
     </option>
@@ -319,7 +336,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1912" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
@@ -351,6 +368,7 @@
     <panes>
       <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -427,14 +445,13 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15429688" />
     <property name="project.structure.side.proportion" value="0.5471264" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/selenium-java-2.53.1/selenium-2.53.1/libs/testng-6.9.9.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="extract.method.default.visibility" value="protected" />
@@ -445,7 +462,7 @@
       <recent name="com.eviltester.webdriver" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.OHHA_Transaction25MonthsBaseTest.testDrills">
+  <component name="RunManager" selected="JUnit.OHHA_openArAccountsBaseTest">
     <configuration default="false" name="OHHA_HoldsBaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -851,10 +868,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.OHHA_Transaction25MonthsBaseTest.testDrills" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.OHHA_Transaction25MonthsBaseTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.OHHA_openArAccountsBaseTest.testDrills" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.OHHA_openArAccountsBaseTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.OHHA_openArAccountsBaseTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.OHHA_Transaction25MonthsBaseTest.testDrills" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.OHHA_Transaction25MonthsBaseTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.OHHA_openArAccountsBaseTest.testDrills" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.OHHA_HoldsBaseTest" />
       </list>
     </recent_temporary>
@@ -876,29 +893,29 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="OHHA_Transaction25MonthsBaseTest - 2016.12.14 at 17h 58m 52s.xml">
-      <configuration name="OHHA_Transaction25MonthsBaseTest" configurationId="JUnit" />
+    <history-entry file="OHHA_openArAccountsBaseTest - 2016.12.19 at 14h 12m 56s.xml">
+      <configuration name="OHHA_openArAccountsBaseTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OHHA_Transaction25MonthsBaseTest - 2016.12.14 at 18h 01m 23s.xml">
-      <configuration name="OHHA_Transaction25MonthsBaseTest" configurationId="JUnit" />
+    <history-entry file="OHHA_openArAccountsBaseTest - 2016.12.19 at 14h 23m 44s.xml">
+      <configuration name="OHHA_openArAccountsBaseTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OHHA_Transaction25MonthsBaseTest - 2016.12.14 at 18h 04m 41s.xml">
-      <configuration name="OHHA_Transaction25MonthsBaseTest" configurationId="JUnit" />
+    <history-entry file="OHHA_openArAccountsBaseTest - 2016.12.19 at 14h 29m 03s.xml">
+      <configuration name="OHHA_openArAccountsBaseTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OHHA_openArAccountsBaseTest_testDrills - 2016.12.14 at 16h 11m 18s.xml">
-      <configuration name="OHHA_openArAccountsBaseTest.testDrills" configurationId="JUnit" />
+    <history-entry file="OHHA_openArAccountsBaseTest - 2016.12.19 at 14h 31m 41s.xml">
+      <configuration name="OHHA_openArAccountsBaseTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OHHA_openArAccountsBaseTest_testDrills - 2016.12.14 at 16h 17m 50s.xml">
-      <configuration name="OHHA_openArAccountsBaseTest.testDrills" configurationId="JUnit" />
+    <history-entry file="OHHA_openArAccountsBaseTest - 2016.12.19 at 14h 34m 38s.xml">
+      <configuration name="OHHA_openArAccountsBaseTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OHHA_openArAccountsBaseTest_testDrills - 2016.12.14 at 16h 38m 01s.xml">
-      <configuration name="OHHA_openArAccountsBaseTest.testDrills" configurationId="JUnit" />
+    <history-entry file="OHHA_openArAccountsBaseTest - 2016.12.19 at 14h 37m 37s.xml">
+      <configuration name="OHHA_openArAccountsBaseTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OHHA_openArAccountsBaseTest_testDrills - 2016.12.14 at 16h 40m 04s.xml">
-      <configuration name="OHHA_openArAccountsBaseTest.testDrills" configurationId="JUnit" />
+    <history-entry file="OHHA_openArAccountsBaseTest - 2016.12.19 at 14h 48m 43s.xml">
+      <configuration name="OHHA_openArAccountsBaseTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OHHA_openArAccountsBaseTest_testDrills - 2016.12.14 at 16h 41m 12s.xml">
-      <configuration name="OHHA_openArAccountsBaseTest.testDrills" configurationId="JUnit" />
+    <history-entry file="OHHA_openArAccountsBaseTest - 2016.12.19 at 14h 50m 40s.xml">
+      <configuration name="OHHA_openArAccountsBaseTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="OHHA_openArAccountsBaseTest_testDrills - 2016.12.14 at 16h 51m 16s.xml">
       <configuration name="OHHA_openArAccountsBaseTest.testDrills" configurationId="JUnit" />
@@ -917,7 +934,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -926,14 +943,13 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17377399" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31960997" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17377399" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31852654" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20149253" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1945629" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -944,6 +960,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23667377" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1019,7 +1036,7 @@
           <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="44" />
+      <option name="time" value="45" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1028,13 +1045,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/sql/ConnectionPoolDataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="40" column="57" selection-start-line="40" selection-start-column="57" selection-end-line="40" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ideaLibSources/jtds-1.3.1-sources.jar!/net/sourceforge/jtds/jdbcx/JtdsDataSource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
@@ -1258,9 +1268,10 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/demo/OHHA/OHHA_TransactionOpenARTest.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/Orlando/OHHA/OHHA_SelfPayBaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
+        <state relative-caret-position="799">
           <caret line="56" column="0" selection-start-line="16" selection-start-column="4" selection-end-line="56" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="e#1266#1267#0" expanded="false" />
             <element signature="e#1288#1289#0" expanded="false" />
           </folding>
@@ -1269,39 +1280,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Orlando/OHHA/OHHA_HoldsBaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
+        <state relative-caret-position="272">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1257#1258#0" expanded="false" />
+            <element signature="e#1279#1280#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Orlando/OHHA/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Orlando/OHHA/Test12.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="25" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Orlando/OHHA/Test.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/Orlando/OHHA/Test12.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/Orlando/OHHA/OHHA_ChargesRolling25BaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="204">
           <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="18" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1119#1120#0" expanded="true" />
-            <element signature="e#1141#1142#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1313,47 +1307,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Orlando/OHHA/OHHA_openArAccountsBaseTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Orlando/OHHA/OHHA_TransactionOpenARBaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        <state relative-caret-position="748">
+          <caret line="49" column="5" selection-start-line="9" selection-start-column="3" selection-end-line="49" selection-end-column="5" />
           <folding>
-            <element signature="e#1154#1155#0" expanded="true" />
-            <element signature="e#1176#1177#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1165#1166#0" expanded="false" />
+            <element signature="e#1187#1188#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Orlando/OHHA/OHHA_TransactionOpenARBaseTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Orlando/OHHA/OHHA_Transaction25MonthsBaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="49" column="5" selection-start-line="9" selection-start-column="3" selection-end-line="49" selection-end-column="5" />
+        <state relative-caret-position="314">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Orlando/OHHA/OHHA_openArAccountsBaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="677">
+          <caret line="55" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Orlando/SQLHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Orlando/BaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="113" column="39" selection-start-line="113" selection-start-column="39" selection-end-line="113" selection-end-column="39" />
-          <folding />
+        <state relative-caret-position="1714">
+          <caret line="143" column="9" selection-start-line="143" selection-start-column="9" selection-end-line="143" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Orlando/NavigationHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Orlando/OHHA/OHHA_Transaction25MonthsBaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+        <state relative-caret-position="473">
+          <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#login#0;class#NavigationHelper#0" expanded="false" />
+            <element signature="method#openProject#0;class#NavigationHelper#0" expanded="false" />
+            <element signature="method#buttonHandle#0;class#NavigationHelper#0" expanded="false" />
+            <element signature="method#selectReportFolder#0;class#NavigationHelper#0" expanded="false" />
+            <element signature="method#selectDatasetid#0;class#NavigationHelper#0" expanded="false" />
+            <element signature="method#selectReportid#0;class#NavigationHelper#0" expanded="false" />
+            <element signature="method#handleprogressBar#0;class#NavigationHelper#0" expanded="false" />
+            <element signature="method#readValue#0;class#NavigationHelper#0" expanded="false" />
+            <element signature="method#readElementName#0;class#NavigationHelper#0" expanded="false" />
+            <element signature="method#addAttribute#0;class#NavigationHelper#0" expanded="false" />
+            <element signature="method#drillDown#0;class#NavigationHelper#0" expanded="false" />
+            <element signature="method#readElementName_detailed#0;class#NavigationHelper#0" expanded="false" />
+            <element signature="method#getValueFromSummaryBeforeDrill#0;class#NavigationHelper#0" expanded="false" />
+            <element signature="method#getIntegerValueFromDetail#0;class#NavigationHelper#0" expanded="false" />
           </folding>
         </state>
       </provider>

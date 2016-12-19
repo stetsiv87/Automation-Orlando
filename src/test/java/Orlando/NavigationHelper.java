@@ -7,12 +7,14 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.IOException;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import static Orlando.BaseTest.driver;
 
 
-public class NavigationHelper {
+public class NavigationHelper implements ProjectConfig {
 
 
     public static  void login( String url,String tenant, String username, String password) {
@@ -79,7 +81,7 @@ public class NavigationHelper {
     public boolean readElementName(String element) {
         driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
         //handleprogressBar();
-         return driver.findElement(By.xpath("//span[contains(@title, '" + element + "'  )]")).isDisplayed();
+        return driver.findElement(By.xpath("//span[contains(@title, '" + element + "'  )]")).isDisplayed();
     }
 
     public  void addAttribute (String attributeID) throws InterruptedException {
@@ -90,16 +92,14 @@ public class NavigationHelper {
         action.perform();
     }
 
-
     public void drillDown (String drillCell) {
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         handleprogressBar();
         WebElement dynamicElement = (new WebDriverWait(driver, 10)
                 .until(ExpectedConditions.presenceOfElementLocated(By.linkText(drillCell))));
-
+        handleprogressBar();
         driver.findElement(By.linkText(drillCell)).click();
     }
-
 
     public boolean readElementName_detailed(String element) {
         driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
@@ -109,4 +109,31 @@ public class NavigationHelper {
         return driver.findElement(By.xpath("//span[contains(@title, '" + element + "'  )]")).isDisplayed();
     }
 
+    public String getValueFromSummaryBeforeDrill () throws IOException {
+
+        String drillMetricValue = null;
+
+        handleprogressBar();
+
+        List<WebElement> TRCollection = driver.findElement(By.xpath(".//*[@id='table_UniqueReportID']/tbody")).findElements(By.tagName("tr"));
+
+        for (WebElement Tr : TRCollection) {
+            {
+                List<WebElement> TDCollection = Tr.findElements(By.tagName("td"));
+
+                for (int i = 0; i <TDCollection.size() ; i++) {
+                    if ((TDCollection.get(i)).getText().equals(getCellForDrill())) {
+                        drillMetricValue=(TDCollection.get(i+1)).getText();
+                    }
+                }
+            }
+
+        }
+        return  drillMetricValue;
+    }
+
+    public String getIntegerValueFromDetail() {
+        String text = driver.findElement(By.className("toolbar-static-text")).getText();
+        return text.trim().substring(text.trim().lastIndexOf(" ")+1);
+    }
 }
