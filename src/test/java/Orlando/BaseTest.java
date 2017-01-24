@@ -45,6 +45,7 @@ public class BaseTest extends NavigationHelper implements ProjectConfig,SQLHelpe
             ConfigDB.getPropsFromFile();
             SQLHelper.getDatasource();
             login(ConfigDB.getUrl(), ConfigDB.getTenant(), ConfigDB.getUserName(), ConfigDB.getTenantPassword());
+            System.out.println("Test row.....")
            
         }
     }
