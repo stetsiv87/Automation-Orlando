@@ -27,15 +27,16 @@ public class BaseTest extends NavigationHelper implements ProjectConfig,SQLHelpe
     public static String drillMetricValue;
 
 
-    public BaseTest(String file_project_config, String projectFolder, String query) throws IOException {
-        this.file = file_project_config;
-        this.query = query;
-        ProjectConfig.getPropsFromFile(file_project_config,projectFolder);
-        if (!file.equals(stFile)){
-            projectname= null;
-            dataset=null;
-            report =null;
-        }
+    public  BaseTest(String file_project_config, String projectFolder, String query) throws IOException {
+
+                this.file = file_project_config;
+                this.query = query;
+                ProjectConfig.getPropsFromFile(file_project_config, projectFolder);
+                if (!file.equals(stFile)) {
+                    projectname = null;
+                    dataset = null;
+                    report = null;
+                }
     }
 
     public static void initBrowser() throws IOException {
@@ -44,6 +45,7 @@ public class BaseTest extends NavigationHelper implements ProjectConfig,SQLHelpe
             ConfigDB.getPropsFromFile();
             SQLHelper.getDatasource();
             login(ConfigDB.getUrl(), ConfigDB.getTenant(), ConfigDB.getUserName(), ConfigDB.getTenantPassword());
+           
         }
     }
 
@@ -96,7 +98,6 @@ public class BaseTest extends NavigationHelper implements ProjectConfig,SQLHelpe
             } else {
                 return Integer.parseInt(db)==Integer.parseInt(ui);
             }
-
         }
         if (type.equals(DOUBLE_DATATYPE)){
             BigDecimal a =BigDecimal.valueOf(Double.parseDouble(db));

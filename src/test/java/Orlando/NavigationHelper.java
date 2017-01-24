@@ -50,16 +50,17 @@ public class NavigationHelper implements ProjectConfig {
     }
 
     public void selectDatasetid(String datasedID) {
+        driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
         handleprogressBar();
-        WebElement dynamicElement = (new WebDriverWait(driver, 10)
+        WebElement dynamicElement = (new WebDriverWait(driver, 30)
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//td[@oid= '" + datasedID + "' ]/.."))));
         driver.findElement(By.xpath("//td[@oid = '" + datasedID + "' ]/..")).click();
     }
 
     public void selectReportid(String reportID) {
-        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
         handleprogressBar();
-        WebElement dynamicElement = (new WebDriverWait(driver, 10)
+        WebElement dynamicElement = (new WebDriverWait(driver,60)
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//td[(@oid =  '" + reportID + "'  )]/.."))));
         driver.findElement(By.xpath("//td[(@oid =  '" + reportID + "'  )]/..")).click();
     }
@@ -93,9 +94,9 @@ public class NavigationHelper implements ProjectConfig {
     }
 
     public void drillDown (String drillCell) {
-        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
         handleprogressBar();
-        WebElement dynamicElement = (new WebDriverWait(driver, 10)
+        WebElement dynamicElement = (new WebDriverWait(driver, 30)
                 .until(ExpectedConditions.presenceOfElementLocated(By.linkText(drillCell))));
         handleprogressBar();
         driver.findElement(By.linkText(drillCell)).click();
@@ -103,8 +104,8 @@ public class NavigationHelper implements ProjectConfig {
 
     public boolean readElementName_detailed(String element) {
         driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
-        handleprogressBar();
-        WebElement dynamicElement = (new WebDriverWait(driver, 10)
+        //handleprogressBar();
+        WebElement dynamicElement = (new WebDriverWait(driver, 100)
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[contains(@title, '" + element + "'  )]"))));
         return driver.findElement(By.xpath("//span[contains(@title, '" + element + "'  )]")).isDisplayed();
     }
