@@ -1,14 +1,19 @@
 -------------------------------------------------------------------------------
 Test set: Orlando.OHHA.OHHA_openArAccountsBaseTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 46.362 sec <<< FAILURE!
-get02CheckTotalsTest(Orlando.OHHA.OHHA_openArAccountsBaseTest)  Time elapsed: 3.307 sec  <<< FAILURE!
-java.lang.AssertionError: DB value: 270014 does not match with UI value 272898 expected:<true> but was:<false>
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failNotEquals(Assert.java:743)
-	at org.junit.Assert.assertEquals(Assert.java:118)
-	at Orlando.BaseTest.checkUIDB(BaseTest.java:119)
-	at Orlando.OHHA.OHHA_openArAccountsBaseTest.get02CheckTotalsTest(OHHA_openArAccountsBaseTest.java:39)
+Tests run: 4, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 174.329 sec <<< FAILURE!
+get03DrillsTest(Orlando.OHHA.OHHA_openArAccountsBaseTest)  Time elapsed: 125.174 sec  <<< ERROR!
+org.openqa.selenium.TimeoutException: Timed out after 100 seconds waiting for presence of element located by: By.xpath: //span[contains(@title, 'PROMPT DETAILS'  )]
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'EPUALVIW0515', ip: '192.168.111.16', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=43.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 80b9311a-1e47-40aa-800c-7e60af177f25
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at Orlando.NavigationHelper.readElementName_detailed(NavigationHelper.java:109)
+	at Orlando.BaseTest.checkElementsPresenceDetailed(BaseTest.java:147)
+	at Orlando.OHHA.OHHA_openArAccountsBaseTest.get03DrillsTest(OHHA_openArAccountsBaseTest.java:44)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -41,12 +46,43 @@ java.lang.AssertionError: DB value: 270014 does not match with UI value 272898 e
 	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
 	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
-get04SummaryDetailedValueComparisonTest(Orlando.OHHA.OHHA_openArAccountsBaseTest)  Time elapsed: 1.514 sec  <<< FAILURE!
-java.lang.AssertionError: Value from Summary : 115,117 does not match with value from details 115714 expected:<true> but was:<false>
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failNotEquals(Assert.java:743)
-	at org.junit.Assert.assertEquals(Assert.java:118)
-	at Orlando.BaseTest.checkSummaryDetails(BaseTest.java:131)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//span[contains(@title, 'PROMPT DETAILS'  )]"}
+Command duration or timeout: 30.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'EPUALVIW0515', ip: '192.168.111.16', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=43.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 80b9311a-1e47-40aa-800c-7e60af177f25
+*** Element info: {Using=xpath, value=//span[contains(@title, 'PROMPT DETAILS'  )]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:899)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:181)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:178)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	... 35 more
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"//span[contains(@title, 'PROMPT DETAILS'  )]"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'EPUALVIW0515', ip: '192.168.111.16', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/YURIY_~1/AppData/Local/Temp/anonymous7570194851422417405webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/YURIY_~1/AppData/Local/Temp/anonymous7570194851422417405webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+get04SummaryDetailedValueComparisonTest(Orlando.OHHA.OHHA_openArAccountsBaseTest)  Time elapsed: 18.91 sec  <<< ERROR!
+java.lang.NullPointerException
+	at Orlando.BaseTest.StringParser(BaseTest.java:85)
+	at Orlando.BaseTest.checkSummaryDetails(BaseTest.java:130)
 	at Orlando.OHHA.OHHA_openArAccountsBaseTest.get04SummaryDetailedValueComparisonTest(OHHA_openArAccountsBaseTest.java:49)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
