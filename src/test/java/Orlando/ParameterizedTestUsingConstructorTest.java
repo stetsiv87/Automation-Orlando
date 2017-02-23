@@ -41,7 +41,7 @@ public class ParameterizedTestUsingConstructorTest extends BaseTest {
         checkElementsPresenceDetailed();
     }
 
-    @Ignore
+
     @Test
     public void Test_05_SummaryDetailedValueComparison() throws IOException, SQLException {
         checkSummaryDetails();
@@ -53,8 +53,8 @@ public class ParameterizedTestUsingConstructorTest extends BaseTest {
     }
 
 
-    public ParameterizedTestUsingConstructorTest(String testname, String filename_project, String foldername_project, String query) throws IOException {
-        super(filename_project, foldername_project, query);
+    public ParameterizedTestUsingConstructorTest(String testname, String filename_project, String query,String foldername_project) throws IOException {
+        super(filename_project, query, foldername_project);
     }
 
     // creates the test data

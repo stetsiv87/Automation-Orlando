@@ -21,10 +21,11 @@ public class BaseTest extends NavigationHelper implements ProjectConfig, SQLHelp
     static public String file;
     static public String stFile;
     static public String query;
-    static public String drillMetricValue;
+    static public String valueAfterDrill;
+    static public String valueBeforeDrill;
 
 
-    public BaseTest(String file_project_config, String projectFolder, String query) throws IOException {
+    public BaseTest(String file_project_config, String query, String projectFolder) throws IOException {
         this.file = file_project_config;
         this.query = query;
         ProjectConfig.getTestConfig(file_project_config, projectFolder);
@@ -120,13 +121,14 @@ public class BaseTest extends NavigationHelper implements ProjectConfig, SQLHelp
     public void checkSummaryDetails() throws IOException, SQLException {
 
         Assert.assertEquals("Value from Summary : " + StringParser(getValueFromSummaryBeforeDrill()) + " does not match with value from details " +
-                drillMetricValue, true, compareValues(getValueDataType(), StringParser(getValueFromSummaryBeforeDrill()), drillMetricValue, "Totals"));
+                valueAfterDrill, true, compareValues(getValueDataType(), StringParser(getValueFromSummaryBeforeDrill()), valueAfterDrill, "Totals"));
     }
 
 
     public void checkElementsPresenceDetailed() throws IOException, InterruptedException {
 
         addAttribute(getAttributeID());
+        valueBeforeDrill=getValueFromSummaryBeforeDrill();
         System.out.println("adding attribute");
         drillDown(getCellForDrill());
         System.out.println("running drill down method");
@@ -140,7 +142,7 @@ public class BaseTest extends NavigationHelper implements ProjectConfig, SQLHelp
         for (int i = 0; i < tokens.length; i++) {
             Assert.assertTrue(readElementName_detailed(tokens[i]));
         }
-        drillMetricValue = getIntegerValueFromDetail();
+        valueAfterDrill = getIntegerValueFromDetail();
         driver.switchTo().window(winHandleBefore);
     }
 
