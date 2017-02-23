@@ -2,6 +2,7 @@ package Orlando;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -16,10 +17,23 @@ import static Orlando.BaseTest.driver;
 
 public class NavigationHelper implements ProjectConfig {
 
+    final static int IMPLICIT_WAIT = 60;
+    final static int PAGA_LOAD_TIMEOUT = 30;
+    //final static int WEBDRIVER_WAIT = 100;
+    WebElement dynamicElement;
+
+
+    public void myImplicitWait(WebDriver driver){
+        driver.manage().timeouts().implicitlyWait(IMPLICIT_WAIT, TimeUnit.SECONDS);
+    }
+
+    public void myPageLoadTimeout(WebDriver driver){
+        driver.manage().timeouts().pageLoadTimeout(PAGA_LOAD_TIMEOUT, TimeUnit.SECONDS);
+    }
 
     public static  void login( String url,String tenant, String username, String password) {
         driver.get(url);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(IMPLICIT_WAIT, TimeUnit.SECONDS);
         driver.findElement(By.className("tenant")).sendKeys(tenant);
         driver.findElement(By.className("username")).sendKeys(username);
         driver.findElement(By.className("password")).sendKeys(password);
@@ -28,40 +42,37 @@ public class NavigationHelper implements ProjectConfig {
     }
 
     public void openProject(String projectName) {
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        //driver.findElement(By.cssSelector (projectName)).click();
+        driver.manage().timeouts().implicitlyWait(IMPLICIT_WAIT, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//a[contains(@href, '" + projectName + "'  )]")).click();
     }
 
     public void buttonHandle(){
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        WebElement dynamicElement = (new WebDriverWait(driver, 10)
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[contains(@value, 'Continue'  )]"))));
+        myImplicitWait(driver);
+//        dynamicElement = (new WebDriverWait(driver, WEBDRIVER_WAIT)
+//                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[contains(@value, 'Continue'  )]"))));
         driver.findElement(By.xpath("//input[contains(@value, 'Continue'  )]")).click();
     }
 
     public void selectReportFolder(String reportFolder) {
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-        WebElement dynamicElement = (new WebDriverWait( driver, 10)
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[contains(text(), '" + reportFolder + "'  )]"))));
-        //driver.findElement(By.cssSelector(reportFolder)).click();
+        myImplicitWait(driver);
+//        dynamicElement = (new WebDriverWait( driver, WEBDRIVER_WAIT)
+//                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[contains(text(), '" + reportFolder + "'  )]"))));
         driver.findElement(By.xpath("//div[contains(text(), '" + reportFolder + "'  )]")).click();
     }
 
     public void selectDatasetid(String datasedID) {
-        driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+        myImplicitWait(driver);
         handleprogressBar();
-        WebElement dynamicElement = (new WebDriverWait(driver, 30)
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//td[@oid= '" + datasedID + "' ]/.."))));
+//        dynamicElement = (new WebDriverWait(driver, WEBDRIVER_WAIT)
+//                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//td[@oid= '" + datasedID + "' ]/.."))));
         driver.findElement(By.xpath("//td[@oid = '" + datasedID + "' ]/..")).click();
     }
 
     public void selectReportid(String reportID) {
-        driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+        myImplicitWait(driver);
         handleprogressBar();
-        WebElement dynamicElement = (new WebDriverWait(driver,60)
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//td[(@oid =  '" + reportID + "'  )]/.."))));
+//        dynamicElement = (new WebDriverWait(driver,WEBDRIVER_WAIT)
+//                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//td[(@oid =  '" + reportID + "'  )]/.."))));
         driver.findElement(By.xpath("//td[(@oid =  '" + reportID + "'  )]/..")).click();
     }
 
@@ -71,18 +82,11 @@ public class NavigationHelper implements ProjectConfig {
             if (progressBar.equals("hidden")) {
                 break;
             }
-
         }
     }
 
     public String readValue(String element) {
         return  driver.findElement(By.xpath("//td[contains(@class, '" + element + "'  )]")).getText();
-    }
-
-    public boolean readElementName(String element) {
-        driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
-        //handleprogressBar();
-        return driver.findElement(By.xpath("//span[contains(@title, '" + element + "'  )]")).isDisplayed();
     }
 
     public  void addAttribute (String attributeID) throws InterruptedException {
@@ -94,32 +98,21 @@ public class NavigationHelper implements ProjectConfig {
     }
 
     public void drillDown (String drillCell) {
-        driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+        myImplicitWait(driver);
         handleprogressBar();
-        WebElement dynamicElement = (new WebDriverWait(driver, 30)
-                .until(ExpectedConditions.presenceOfElementLocated(By.linkText(drillCell))));
+//        dynamicElement = (new WebDriverWait(driver, WEBDRIVER_WAIT)
+//                .until(ExpectedConditions.presenceOfElementLocated(By.linkText(drillCell))));
         handleprogressBar();
         driver.findElement(By.linkText(drillCell)).click();
-    }
-
-    public boolean readElementName_detailed(String element) {
-        driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
-        //handleprogressBar();
-        WebElement dynamicElement = (new WebDriverWait(driver, 100)
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[contains(@title, '" + element + "'  )]"))));
-        return driver.findElement(By.xpath("//span[contains(@title, '" + element + "'  )]")).isDisplayed();
     }
 
     public String getValueFromSummaryBeforeDrill () throws IOException {
 
         String drillMetricValue = null;
-
         handleprogressBar();
-
         List<WebElement> TRCollection = driver.findElement(By.xpath(".//*[@id='table_UniqueReportID']/tbody")).findElements(By.tagName("tr"));
 
         for (WebElement Tr : TRCollection) {
-            {
                 List<WebElement> TDCollection = Tr.findElements(By.tagName("td"));
 
                 for (int i = 0; i <TDCollection.size() ; i++) {
@@ -128,8 +121,6 @@ public class NavigationHelper implements ProjectConfig {
                     }
                 }
             }
-
-        }
         return  drillMetricValue;
     }
 
@@ -137,4 +128,18 @@ public class NavigationHelper implements ProjectConfig {
         String text = driver.findElement(By.className("toolbar-static-text")).getText();
         return text.trim().substring(text.trim().lastIndexOf(" ")+1);
     }
+
+    public boolean readElementName(String element) {
+        myImplicitWait(driver);
+        return driver.findElement(By.xpath("//span[contains(@title, '" + element + "'  )]")).isDisplayed();
+    }
+
+    public boolean readElementName_detailed(String element) {
+        myImplicitWait(driver);
+
+//        dynamicElement = (new WebDriverWait(driver, WEBDRIVER_WAIT)
+//                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[contains(@title, '" + element + "'  )]"))));
+        return driver.findElement(By.xpath("//span[contains(@title, '" + element + "'  )]")).isDisplayed();
+    }
+
 }
