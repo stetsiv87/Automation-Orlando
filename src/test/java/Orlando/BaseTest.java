@@ -120,8 +120,8 @@ public class BaseTest extends NavigationHelper implements ProjectConfig, SQLHelp
 
     public void checkSummaryDetails() throws IOException, SQLException {
 
-        Assert.assertEquals("Value from Summary : " + StringParser(getValueFromSummaryBeforeDrill()) + " does not match with value from details " +
-                valueAfterDrill, true, compareValues(getValueDataType(), StringParser(getValueFromSummaryBeforeDrill()), valueAfterDrill, "Totals"));
+        Assert.assertEquals("Value from Summary : " + StringParser(valueBeforeDrill) + " does not match with value from details " +
+                valueAfterDrill, true, compareValues(getValueDataType(), StringParser(valueBeforeDrill), valueAfterDrill, "Totals"));
     }
 
 
